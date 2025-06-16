@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/retro_ants_media_favicon_32x32.png" type="image/png">
+    <title>How It Works</title>
+    <title>How It Works | Campaign Process at Retro Ants Media</title>
+<meta name="description" content="Learn how Retro Ants Media plans, launches, and tracks campaigns using digital and offline strategies to maximize your brand reach.">
+<meta name="keywords" content="how it works, media campaign process, advertising strategy, marketing journey, Retro Ants Media">
+    <style>
+      /* General Styles */
+      body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background:linear-gradient(to right, #28a745, #43a4c9);
+      color: #333;
+      scroll-behavior: smooth;
+      }
+      .container {
+      max-width: 900px;
+      margin: 25px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      }
+      h1 {
+      color: #000000;
+      font-size: 32px;
+      margin-bottom: 20px;
+      }
+      .step {
+      display: flex;
+      align-items: center;
+      background: #fff;
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      text-align: left;
+      opacity: 0;
+      transform: translateX(-50px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+      }
+      .step img {
+      width: 85px;
+      height: auto;
+      margin-right: 20px;
+      }
+      .step-text h2 {
+      color: #28a745;
+      font-size: 24px;
+      margin: 0;
+      }
+      .step-text p {
+      font-size: 20px;
+      color: #555;
+      margin: 7px 0px 0px 0px;
+      font-family:times new roman;
+      }
+      /* CTA Button */
+      .cta-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 15px 30px;
+      background-color: #28a745;
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      border-radius: 5px;
+      transition: 0.3s;
+      }
+      .cta-button:hover {
+      background-color: #218838;
+      }
+      /* Footer */
+      .footer {
+      background:linear-gradient(to right, #28a745, #43a4c9);
+      color: white;
+      text-align: center;
+      margin-top:5px;
+      font-size:16px;
+      }
+      @media only screen and (max-width: 768px) {
+      .step {
+      flex-direction: column;
+      text-align: center;
+      }
+      h1 {
+      color: #000000;
+      font-size: 24px;
+      margin-bottom: 20px;
+      }
+      .step img {
+      margin-bottom: 10px;
+      width:20%;
+      }
+      .step-text h2 {
+      color: #28a745;
+      font-size: 17px;
+      margin: 0;
+      }
+      .step-text p {
+      font-size: 15px;
+      color: #555;
+      margin: 5px 0 0;
+      }
+      .cta-button {
+      padding: 10px 25px;
+      font-size: 15px;
+      }
+      .footer {
+      font-size:13px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>How it Works</h1>
+      <div class="step">
+        <div class="step-text">
+          <h2>Consultation & Requirement Gathering</h2>
+          <p>We begin with a detailed discovery session to understand your goals, target audience, challenges, and business vision.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-text">
+          <h2>Strategy & Concept Development</h2>
+          <p>Our experts craft a tailored strategy whether it's a marketing roadmap, branding blueprint, or advertising plan aligned to your business objectives.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-text">
+          <h2>Creative Planning & Asset Production</h2>
+          <p>From compelling copy to bold visuals, we design and produce high impact content and creatives that reflect your brand essence.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-text">
+          <h2>Execution Across Channels</h2>
+          <p>We launch your campaigns across the right platforms digital, physical, and social optimized for visibility, reach, and engagement.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-text">
+          <h2>Monitoring, Optimization & Reporting</h2>
+          <p>Post-launch, we track performance, gather insights, and continuously optimize for better results. You'll receive detailed reports and analysis.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-text">
+          <h2>Ongoing Support & Growth Partnership</h2>
+          <p>We don’t stop after launch. We stay with you refining strategies, expanding reach, and supporting long term brand growth and transformation.</p>
+        </div>
+      </div>
+      <!-- Call to Action -->
+      <a href="booking.html" class="cta-button">Start Your Campaign Today</a>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+      <p>Copyright © 2025 RETRO ANTS MEDIA. All Rights Reserved.</p>
+    </footer>
+    <script>
+      // Add animation effects when scrolling
+      document.addEventListener("DOMContentLoaded", function () {
+          const steps = document.querySelectorAll(".step");
+      
+          function showElements() {
+              let windowHeight = window.innerHeight;
+              let revealPoint = 100;
+      
+              steps.forEach(step => {
+                  let elementTop = step.getBoundingClientRect().top;
+                  if (elementTop < windowHeight - revealPoint) {
+                      step.style.opacity = "1";
+                      step.style.transform = "translateX(0)";
+                  }
+              });
+          }
+      
+          window.addEventListener("scroll", showElements);
+          showElements();
+      });
+    </script>
+  </body>
+</html>

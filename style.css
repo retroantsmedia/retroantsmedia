@@ -1,0 +1,610 @@
+/* Header Styling */ 
+        body{
+            font-family:arial;
+            
+        }
+        .body{
+            font-family:arial;
+            margin:0px;
+            padding:0px;
+            background-color:#ffffff;
+            color: #333;
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth; /* Enables smooth scrolling */
+        }
+        *{
+            margin:0px;
+            padding: 0px;
+            box-sizing:border-box;
+        }
+        header {
+            background:linear-gradient(to right, #43a4c9, #f13131);
+            color: white;
+            padding:20px 0px;
+            text-align: center;
+            position:fixed;
+            width:100%;
+            top:0;
+            z-index:1000;
+            display: flex;
+            align-items:center;
+        }
+        .logo img{
+           weight:90px;
+           height:70px;
+           padding:0px 10px;
+           border-radius:13px;
+        }
+        .navigation{
+            display:flex;
+            flex-grow:1;
+            justify-content:center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            font-size: 18px;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        nav a:hover, nav a.active{
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 5px; 
+        }
+          /* Hero Section */
+        .hero {
+            background: url('https://source.unsplash.com/1600x900/?cycling,advertising') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding:120px 20px 40px 20px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin: 0;
+            color:#28a745;
+        }
+        .hero p {
+            font-size: 18px;
+            margin-top: 20px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            color:#000000;
+        }
+        .cta-button {
+            background:linear-gradient(to right, #28a745, #43a4c9);;
+            color: white;
+            padding: 15px 30px;
+            font-size: 20px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #218838;
+        }
+        .section{
+            padding: 100px 20px;
+            text-align: center;
+            height: 100vh;
+        }
+        .hero h1{
+            padding:20px 0px 0px 0px;
+        }
+        .hero p{
+            padding:0px 0px 10px 0px;
+        }
+        /* About Section */
+        .about {
+            text-align: justify;
+            padding:20px 20px;
+            background:linear-gradient(to right, #28a745, #43a4c9);
+        }
+        .about h2 {
+            padding:20px 0px;
+            color: #ffffff;
+            font-size: 32px;
+            text-align:center;
+        }
+        .about p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        /*VISION & MISSION SECTION */
+        .container {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 0px auto;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+        .box {
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 12px;
+            color: white;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            background: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            flex: 1;
+        }
+        .box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+       .box h2 {
+            margin-bottom: 10px;
+            color: #2D7D46;
+            font-size: 26px;
+            text-align:center;
+        }
+       .box p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.4;
+            text-align:justify;
+        }
+        /* Services Section */
+        .services {
+            text-align: center;
+            padding: 20px 20px;
+            background:linear-gradient(to right, #28a745, #43a4c9);
+        }
+        .services h2 {
+            color: #ffffff;
+            font-size:32px;
+        }
+        .services-list {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .service-box {
+            background: white;
+            padding: 20px 32px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width:400px;
+            height: auto;
+            text-align: center;
+        }
+        .service-box h3 {
+            color: #28a745 ;
+            padding:6px;
+            font-size:21px;
+        }
+        .service-box li,ul{
+            color:#000000;
+            text-align:left;
+            padding:10px 3px;
+            font-size:18px;
+        }
+        /* why-choose-section */
+        .why-choose-section {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 30px;
+            background:#28a745;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .why-choose-section h2 {
+            color: #000000;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        .benefit-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 10px;
+        }
+        .benefit-item {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+        .benefit-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+        .benefit-item i {
+            font-size: 40px;
+            color: #2D7D46;
+            margin-bottom: 15px;
+        }
+        .benefit-item h3 {
+            color: #2D7D46;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .benefit-item p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.5;
+            text-align:left;
+        }
+        /* footer */
+        .contactus {
+            text-align: center;
+            padding: 20px;
+            height: 100vh;
+        }
+         /* Contact Container */
+        .contact-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 30px;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: 0.3s;
+        }
+            .contact-info a {
+            font-size:16px;
+            color:#000000;
+            text-decoration:none;
+        }
+            .contact-container:hover {
+            transform: scale(1.02);
+        }
+
+            .contact-container h2 {
+            color: #28a745;
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+        .contact-para{
+            font-size:15px;
+            font-weight:bold;
+            margin:20px 0px;
+        }
+
+        .contact-info p {
+            font-size: 16px;
+            color: #000000;
+            margin-bottom: 10px;
+            text-align:left;
+        }
+
+        /* Contact Form */
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            font-family:arial;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .contact-form input:focus, .contact-form textarea:focus {
+            border-color: #28a745;
+            box-shadow: 0 0 8px rgba(40, 167, 69, 0.4);
+        }
+
+        .contact-form button {
+            background: linear-gradient(to right, #28a745, #218838);
+            color: white;
+            padding: 12px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            width: 50%;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .contact-form button:hover {
+            background:linear-gradient(to right, #28a745, #43a4c9);;
+            transform: scale(1.05);
+        }
+
+        /* Success Message */
+        .success-message {
+            display: none;
+            background: #d4edda;
+            color: #155724;
+            padding: 12px;
+            border-radius: 8px;
+            margin-top: 15px;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        /* Validation Message */
+        .error-message {
+            color: red;
+            font-size: 14px;
+            display: none;
+            text-align: left;
+        }
+        .footer {
+            background:linear-gradient(to right, #28a745, #43a4c9);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        .footer-content {
+            max-width: 800px;
+            margin: auto;
+        }
+        .footer h2 {
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+        .footer p {
+            font-size: 16px;
+            margin:20px 0px 0px 0px;
+            line-height: 1.5;
+        }
+        /* Navigation Links in Two Rows */
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        .footer-links-row {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        /* Social Icons Below Links on Left */
+        .footer-bottom {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            text-align: left;
+        }
+       /* Social Icons Container */
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        /* Default Social Icon Style */
+        .icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease-in-out;
+            overflow: hidden;
+        }
+
+        /* Default Black & White Icon */
+        .icon img {
+            width: 30px;
+            height: 30px;
+            filter: grayscale(100%);
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Brand Colors on Hover */
+        .icon.youtube:hover { background: #FF0000; } /* YouTube Red */
+        .icon.instagram:hover { background: linear-gradient(45deg, #fccc63, #bc2a8d); } /* Instagram Gradient */
+        .icon.linkedin:hover { background: #0077B5; } /* LinkedIn Blue */
+        .icon.facebook:hover { background: #316FF6; } /* Facebook Blue */
+        
+        /* X (Twitter) Hover Effect */
+        .icon.twitter:hover {
+            background: #000000; /* Black background */
+        }
+        
+        .icon.twitter:hover img {
+            filter: invert(100%); /* Turn the "X" logo white */
+        }
+
+        /* Remove Black & White Effect on Hover */
+        .icon:not(.twitter):hover img {
+            filter: none;
+        }
+        .footer-bottom p {
+            padding:20px 0px 0px 0px;
+            font-size: 14px;
+            opacity: 0.8;
+            margin: 0;
+        }
+         /* whatsapp */
+        .whatsapp-chat {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #000000;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .whatsapp-chat img {
+            width: 24px;
+            height: 24px;
+        }
+        @media only screen and (max-width: 768px) {
+             .logo img{
+           weight:50px;
+           height:50px;
+           padding:0px 10px;
+           border-radius:7px;
+        }
+            .hero p, .about p, .service-box p, .benefit-item p, .box p, .contact-form{
+                font-size:16px;
+            }
+           .about h2, .services h2, .box h2, .contact-container h2, .why-choose-section h2{
+                font-size:25px;
+            }
+            .about{
+               padding:0px 20px;
+            }
+            .hero {
+            background: url('https://source.unsplash.com/1600x900/?cycling,advertising') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding:250px 20px 20px 20px;
+        }
+        .cta-button{
+         padding:12px 15px;
+         margin:25px 0px 0px 0px;
+         font-size:15px;
+        }
+        .box{
+             margin:0px;
+             padding:10px;
+             flex:none;
+             max-width:300px;
+        }
+        .container{
+            margin:0px 20px 0px 20px;
+            display:flex;
+            justify-content:center;
+            flex-wrap:wrap;
+
+        }
+        .service-box{
+            padding:10px 20px;
+        }
+        .service-box h3{
+            padding:0px;
+        }
+        .service-box li,ul{
+            font-size:16px;
+        }
+        .box-mission{
+            width:;
+        }
+            .benefit-list {
+                grid-template-columns: repeat(1, 1fr);
+            }
+            .benefit-item h3{
+                   font-size:21px;
+            }
+            .why-choose-section{
+                margin:20px 0px;
+            }
+            .why-choose-section h2{
+                margin:0px;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+                padding:20px 10px;
+                margin:0px;
+            }
+            .contact-container{
+                margin:20px 0px;
+            }
+            .contact-form button{
+               width:50%;
+               font-size:16px;
+            }
+            .footer p {
+            font-size: 16px;
+            margin:0px;
+        }
+       .footer-links-row {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .social-icons {
+                gap: 10px;
+            }
+            
+            .icon {
+                width: 45px;
+                height: 45px;
+            }
+
+            .icon img {
+                width: 25px;
+                height: 25px;
+            }
+     header {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+        nav {
+            flex-direction:column;
+            text-align:center;
+            width:100%;
+        }
+
+        .logo {
+            margin-bottom:10px;
+        }
+        .nav-link{
+            display:block;
+            margin:0px 0px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 5px;
+            font-size: 18px;
+            display: inline-block;
+            transition: 0.3s;
+        }
+         .hero h1 {
+            font-size: 33px;
+            margin: 0;
+            color:#28a745;
+        }
+          .whatsapp-chat {
+            bottom: 10px;
+            right: 10px;
+            padding:10px 10px;
+            margin:0px 0px 99px 0px;
+            border-radius: 50px;
+            font-size: 9px;
+            display: flex;
+            align-items: center;
+            justify-content:flex-start;
+            gap: 10px;
+        }
+
+    }

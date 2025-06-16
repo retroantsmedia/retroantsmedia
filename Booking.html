@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/retro_ants_media_favicon_32x32.png" type="image/png">
+    <title>Book A campaign with RETRO ANTS MEDIA</title>
+    <title>Book a Campaign | Retro Ants Media</title>
+<meta name="description" content="Book your campaign with Retro Ants Media today. Simple, fast, and effective way to launch your brand with expert support.">
+<meta name="keywords" content="campaign booking, book media campaign, Retro Ants Media booking, marketing form, advertising form">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background:linear-gradient(to right, #28a745, #43a4c9);
+            color: #333;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #28a745;
+            text-align: center;
+            font-size:25px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+            font-size:16px;
+        }
+
+        input, textarea {
+            width: 96%;
+            padding: 10px 0px 10px 10px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        select{
+            width: 98%;
+            padding: 10px 0px 10px 10px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+       button{
+            width: 50%;
+            padding: 12px;
+            background-color: #28a745;
+            color: white;
+            text-align:center;
+            border: none;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+            font-size:18px;
+        }
+        form .button-center{
+            text-align:center;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        @media only screen and (max-width:768px){
+           .container{
+            margin: 40px 30px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+           }
+            h2{
+                font-size:21px;
+            }
+            label{
+                font-size:14px;
+            }
+            input, select, textarea {
+            font-size:13px;
+            }
+            button{
+            font-size:12px;   
+            }
+        
+         }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Book Your Campaign with RETRO ANTS MEDIA</h2>
+        <form id="adform" onsubmit="submitForm(event)">
+            <!-- Ad Type Selection -->
+            <label for="service-type">Select service Type:</label>
+            <select id="service-type" name="service_type" required>
+                <option value="marketing">Martketing</option>
+                <option value="advertising">Advertising</option>
+                <option value="branding">Branding</option>
+            </select>
+
+            <!-- Location -->
+            <label for="location">Select Location:</label>
+            <input type="text" id="location" name="location" placeholder="Enter city or area" required>
+
+            <!-- Duration -->
+            <label for="duration">Campaign Duration (Days):</label>
+            <input type="number" id="duration" name="duration" min="1" required>
+
+            <!-- Contact Details -->
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <!-- Additional Message -->
+            <label for="message">Additional Notes (Optional):</label>
+            <textarea id="message" name="message" rows="4" placeholder="Share any instructions, goals, or desired outcomes (e.g., awareness, leads, engagement)."></textarea>
+
+            <!-- Submit Button -->
+            <div class="button-center">
+            <button type="submit">Book Now</button>
+            </div>
+        </form>
+    </div>
+    <script>
+    function submitForm(event) {
+        event.preventDefault();
+        
+        var formData = new FormData(document.getElementById("adform"));
+        
+        fetch("https://script.google.com/macros/s/AKfycbz01R3xoJUAHkE9zAw7qu_Eoa5GltA_gPb9pF82NC9bK6rH5aUc2cexau5fio54E9DEnA/exec", {
+            method: "POST",
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            alert(data.message);
+            document.getElementById("adform").reset();
+        })
+        .catch(error => console.error("Error:", error));
+    }
+</script>
+
+</body>
+</html>
