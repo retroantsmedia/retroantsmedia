@@ -246,15 +246,23 @@
         background-color:linear-gradient(to right, #28a745, #43a4c9);
         width:auto;
         height:auto;
+        padding: 20px 0px;
         }
        .trusted-clients h1{
         font-size:32px;
         text-align:center;
         color:#000000;
+        margin-bottom:20px:
         }
+      .trusted-images{
+              display:flex;
+              justify-content:center;
+              gap:20px;
+      }
        .trusted-images img{
-       width:50px;
-       height:50px;
+       width:80px;
+       height:80px;
+       object-fit:contain;
        }
         /* footer */
         .contactus {
@@ -623,6 +631,7 @@
 
 
     }
+
 
 
 
