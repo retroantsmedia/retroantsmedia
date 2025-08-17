@@ -253,16 +253,6 @@
         text-align:center;
         color:#000000;
         }
-      .trusted-images{
-        display:flex;
-        justify-content:center;
-        gap:20px;
-      }
-       .trusted-images img{
-       width:80px;
-       height:80px;
-       object-fit:contain;
-       }
 div.gallery {
   border: 1px solid #ccc;
 }
@@ -274,11 +264,6 @@ div.gallery:hover {
 div.gallery img {
   width: 100%;
   height: auto;
-}
-
-div.desc {
-  padding: 15px;
-  text-align: center;
 }
 .responsive {
   padding: 0 6px;
@@ -662,6 +647,7 @@ div.desc {
 
 
     }
+
 
 
 
