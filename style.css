@@ -257,11 +257,6 @@
         border: 1px solid #ccc;
         margin:0px 0px 30px0px;
           }
-
-div.gallery:hover {
-  border: 1px solid #777;
-}
-
 div.gallery img {
   width: 100%;
   height: auto;
@@ -648,6 +643,7 @@ div.gallery img {
 
 
     }
+
 
 
 
