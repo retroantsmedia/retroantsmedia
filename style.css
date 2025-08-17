@@ -243,9 +243,8 @@
         }
         /* clients */
        .trusted-clients{
-        background-color:linear-gradient(to right, #28a745, #43a4c9);
+        background:linear-gradient(to right, #28a745, #43a4c9);
         max-width: 1200px;
-        margin: 20px auto;
         padding: 10px;
         border-radius: 10px;
         }
@@ -256,6 +255,7 @@
         }
          div.gallery {
         border: 1px solid #ccc;
+        margin:0px 0px 30px0px;
           }
 
 div.gallery:hover {
@@ -648,6 +648,7 @@ div.gallery img {
 
 
     }
+
 
 
 
