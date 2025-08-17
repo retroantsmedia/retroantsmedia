@@ -241,15 +241,18 @@
             line-height: 1.5;
             text-align:left;
         }
+        .trusted-clients{
+                background-color:linear-gradient(to right, #28a745, #43a4c9);
+        }
         /* clients */
-       .trusted clients h1{
+       .trusted-clients h1{
         text-align:center;
         color: #000000;
         }
-trusted clients .img{
-width:50px;
-height:50px;
-}
+       trusted-images .img{
+       width:50px;
+       height:50px;
+       }
         /* footer */
         .contactus {
             text-align: center;
@@ -617,6 +620,7 @@ height:50px;
 
 
     }
+
 
 
 
