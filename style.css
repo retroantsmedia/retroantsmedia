@@ -565,6 +565,11 @@ div.gallery img {
             .why-choose-section h2{
                 margin:0px;
             }
+.trusted-clients h1 {
+  font-size: 25px;
+  text-align: center;
+  color: #000000;
+}
         .responsive {
           padding: 0 6px;
           float: left;
@@ -657,6 +662,7 @@ div.gallery img {
 
 
     }
+
 
 
 
