@@ -244,8 +244,10 @@
         /* clients */
        .trusted-clients{
         background-color:linear-gradient(to right, #28a745, #43a4c9);
-        width:auto;
-        height:auto;
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 10px;
+        border-radius: 10px;
         }
        .trusted-clients h1{
         font-size:32px;
@@ -646,6 +648,7 @@ div.gallery img {
 
 
     }
+
 
 
 
