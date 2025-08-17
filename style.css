@@ -252,12 +252,11 @@
         font-size:32px;
         text-align:center;
         color:#000000;
-        margin-bottom:20px:
         }
       .trusted-images{
-              display:flex;
-              justify-content:center;
-              gap:20px;
+        display:flex;
+        justify-content:center;
+        gap:20px;
       }
        .trusted-images img{
        width:80px;
@@ -631,6 +630,7 @@
 
 
     }
+
 
 
 
