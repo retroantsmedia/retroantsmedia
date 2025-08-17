@@ -244,6 +244,8 @@
         /* clients */
        .trusted-clients{
         background-color:linear-gradient(to right, #28a745, #43a4c9);
+        width:100px;
+        height:auto;
         }
        .trusted-clients h1{
         text-align:center;
@@ -620,6 +622,7 @@
 
 
     }
+
 
 
 
