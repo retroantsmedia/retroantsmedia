@@ -185,14 +185,14 @@
         .service-box h3 {
             color: #28a745 ;
             padding:6px;
-            font-size:21px;
+            font-size:25px;
         }
         .service-box li,ul{
             color:#000000;
             text-align:left;
             font-family:arial;
             padding:5px 3px;
-            font-size:25px;
+            font-size:21px;
         }
         /* why-choose-section */
         .why-choose-section {
@@ -664,6 +664,7 @@ div.gallery img {
 
 
     }
+
 
 
 
