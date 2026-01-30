@@ -180,6 +180,7 @@
             max-width:400px;
             height: auto;
             text-align: center;
+            font-family:arial;
         }
         .service-box h3 {
             color: #28a745 ;
@@ -189,9 +190,9 @@
         .service-box li,ul{
             color:#000000;
             text-align:left;
-            font-family: arial;
+            font-family:arial;
             padding:5px 3px;
-            font-size:20px;
+            font-size:25px;
         }
         /* why-choose-section */
         .why-choose-section {
@@ -663,6 +664,7 @@ div.gallery img {
 
 
     }
+
 
 
 
