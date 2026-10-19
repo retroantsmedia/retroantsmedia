@@ -116,11 +116,9 @@ nav a.active {
 .slider {
   position: relative;
   width: 100%;
-  max-width: 900px;
   height: 450px;
   margin: 20px auto; /* centres the slider (body is no longer flex) */
   overflow: hidden;
-  border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
   background: #000;
 }
@@ -157,8 +155,8 @@ nav a.active {
 #s6:checked ~ .slides { transform: translateX(-500%); }
 
 /* Autoplay: runs until a dot/arrow is clicked, pauses on hover */
-.slider:not(:has(input:checked)) .slides { animation: auto 18s infinite; }
-.slider:not(:has(input:checked)) .dot    { animation: dotOn 18s infinite; }
+.slider:not(:has(input:checked)) .slides { animation: auto 3s infinite; }
+.slider:not(:has(input:checked)) .dot    { animation: dotOn 3s infinite; }
 .slider:not(:has(input:checked)) .d2 { animation-delay: 3s; }
 .slider:not(:has(input:checked)) .d3 { animation-delay: 6s; }
 .slider:not(:has(input:checked)) .d4 { animation-delay: 9s; }
