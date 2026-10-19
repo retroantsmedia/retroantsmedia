@@ -45,7 +45,7 @@ SEO friendly website design,business website developers,ecommerce websites,corpo
       <!-- slider section -->
      <div class="slider">
     <!-- Radio controls -->
-    <input type="radio" name="slide" id="s1">
+    <input type="radio" name="slide" id="s1" checked>
     <input type="radio" name="slide" id="s2">
     <input type="radio" name="slide" id="s3">
     <input type="radio" name="slide" id="s4">
@@ -293,6 +293,33 @@ SEO friendly website design,business website developers,ecommerce websites,corpo
         </div>
     </footer>
     <script>
+        // Auto-change the slider every 3 seconds
+(function () {
+  var radios = document.querySelectorAll('.slider input[type="radio"]');
+  var slider = document.querySelector('.slider');
+  if (!radios.length || !slider) return;
+
+  var current = 0;
+  for (var i = 0; i < radios.length; i++) {
+    if (radios[i].checked) current = i;
+  }
+  radios[current].checked = true;
+
+  var paused = false;
+  slider.addEventListener('mouseenter', function () { paused = true; });
+  slider.addEventListener('mouseleave', function () { paused = false; });
+
+  // keep in sync when the user clicks a dot or arrow
+  radios.forEach(function (r, i) {
+    r.addEventListener('change', function () { current = i; });
+  });
+
+  setInterval(function () {
+    if (paused) return;
+    current = (current + 1) % radios.length;
+    radios[current].checked = true;
+  }, 3000);
+})();
         document.addEventListener("DOMContentLoaded", function () {
         const sections = document.querySelectorAll(".hero,.about,.services,.why-choose-section,.contact-container");
             const navLinks = document.querySelectorAll(".nav-link");
