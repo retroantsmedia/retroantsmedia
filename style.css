@@ -873,3 +873,33 @@ div.gallery img {
     gap: 10px;
   }
 }
+
+/* ==========================================================
+   TYPEWRITER TEXT
+   ========================================================== */
+.typewriter {
+  display: grid; /* ghost + typed text share one cell, so the height never jumps */
+}
+
+.typewriter > span {
+  grid-area: 1 / 1;
+}
+
+.tw-ghost {
+  visibility: hidden; /* invisible full text that reserves the space */
+}
+
+.tw-text::after {
+  content: "";
+  display: inline-block;
+  width: 3px;
+  height: 1em;
+  margin-left: 4px;
+  vertical-align: -0.1em;
+  background: currentColor;
+  animation: blink 0.8s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
