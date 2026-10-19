@@ -504,9 +504,9 @@ div.gallery img {
         }
         @media only screen and (max-width: 768px) {
              .logo img{
-           weight:50px;
+           width:50px;
            height:50px;
-           padding:0px 10px;
+           margin:0px 10px;
            border-radius:7px;
         }
             .hero p, .about p, .service-box p, .benefit-item p, .box p, .contact-form{
