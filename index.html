@@ -323,6 +323,32 @@ SEO friendly website design,business website developers,ecommerce websites,corpo
     radios[current].checked = true;
   }, 3000);
 })();
+
+// Typewriter text: types, waits 2s, erases, repeats
+(function () {
+  var el = document.getElementById('typewriter');
+  var ghost = document.querySelector('.tw-ghost');
+  if (!el || !ghost) return;
+
+  var text = ghost.textContent;
+  var i = 0;
+  var deleting = false;
+
+  function tick() {
+    if (!deleting) {
+      i++;
+      el.textContent = text.slice(0, i);
+      if (i === text.length) { deleting = true; setTimeout(tick, 2000); return; }
+      setTimeout(tick, 90);   // typing speed (ms per letter)
+    } else {
+      i--;
+      el.textContent = text.slice(0, i);
+      if (i === 0) { deleting = false; setTimeout(tick, 500); return; }
+      setTimeout(tick, 40);   // erasing speed
+    }
+  }
+  tick();
+})();
         document.addEventListener("DOMContentLoaded", function () {
         const sections = document.querySelectorAll(".hero,.about,.services,.why-choose-section,.contact-container");
             const navLinks = document.querySelectorAll(".nav-link");
