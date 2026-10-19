@@ -163,7 +163,7 @@ nav a.active {
 .slider:not(:has(input:checked)) .d5 { animation-delay: 12s; }
 .slider:not(:has(input:checked)) .d6 { animation-delay: 15s; }
 .slider:hover .slides,
-.slider:hover .dot { animation-play-state: paused !important; }
+.slider:hover .dot { animation-play-state: running !important; }
 
 @keyframes auto {
   0%, 13.33%    { transform: translateX(0); }
