@@ -742,7 +742,6 @@ div.gallery img {
   /* Slider */
   .slider {
     height: 250px;
-    border-radius: 8px;
   }
 
   .arrows label {
