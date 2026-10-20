@@ -232,28 +232,6 @@ nav a.active {
 .vf.bl { bottom: 28px; left: 24px;  border-bottom-width: 3px; border-left-width: 3px; }
 .vf.br { bottom: 28px; right: 24px; border-bottom-width: 3px; border-right-width: 3px; }
 
-.rec {
-  position: absolute;
-  top: 138px;
-  right: 84px;
-  color: #fff;
-  font-size: 14px;
-  font-weight: bold;
-  letter-spacing: 2px;
-}
-
-.rec::before {
-  content: "";
-  display: inline-block;
-  width: 11px;
-  height: 11px;
-  margin-right: 8px;
-  border-radius: 50%;
-  background: #ff2d2d;
-  box-shadow: 0 0 10px 3px rgba(255, 45, 45, 0.8);
-  animation: recBlink 1.2s steps(1) infinite;
-}
-
 @keyframes recBlink {
   50% { opacity: 0; }
 }
