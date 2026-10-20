@@ -63,7 +63,7 @@ nav a.active {
 }
 
 /* ==========================================================
-   HERO  (3D flipping photo wall, film strip, camera flashes)
+   HERO  (3D flipping photo wall, camera flashes)
    ========================================================== */
 .hero {
   position: relative;
@@ -75,7 +75,7 @@ nav a.active {
   justify-content: center;
   text-align: center;
   color: #fff;
-  padding: 140px 20px 110px 20px;
+  padding: 140px 20px 80px 20px;
   /* royal indigo to magenta, slowly shifting */
   background: linear-gradient(135deg, #141a4a, #3b2a8c, #7a2f8f, #c2417a, #3b2a8c);
   background-size: 300% 300%;
@@ -219,27 +219,6 @@ nav a.active {
   100%     { opacity: 0; transform: scale(1.5); }
 }
 
-/* scrolling film strip along the bottom */
-.film {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: calc(100% + 360px);
-  height: 58px;
-  background:
-    repeating-linear-gradient(90deg, #efe6cf 0 14px, transparent 14px 30px) 0 6px / 100% 9px no-repeat,
-    repeating-linear-gradient(90deg, #efe6cf 0 14px, transparent 14px 30px) 0 calc(100% - 6px) / 100% 9px no-repeat,
-    linear-gradient(90deg, transparent 0 104px, #111 104px 120px) 0 0 / 120px 100% repeat-x,
-    linear-gradient(90deg, #c9707f 0 120px, #e0a458 120px 240px, #43a4c9 240px 360px) 0 center / 360px 52% repeat-x,
-    #111;
-  animation: filmLeft 9s linear infinite;
-}
-
-@keyframes filmLeft {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-360px); }
-}
-
 /* camera viewfinder corners + REC light */
 .vf {
   position: absolute;
@@ -250,8 +229,8 @@ nav a.active {
 
 .vf.tl { top: 125px;  left: 24px;  border-top-width: 3px;    border-left-width: 3px; }
 .vf.tr { top: 125px;  right: 24px; border-top-width: 3px;    border-right-width: 3px; }
-.vf.bl { bottom: 76px; left: 24px;  border-bottom-width: 3px; border-left-width: 3px; }
-.vf.br { bottom: 76px; right: 24px; border-bottom-width: 3px; border-right-width: 3px; }
+.vf.bl { bottom: 28px; left: 24px;  border-bottom-width: 3px; border-left-width: 3px; }
+.vf.br { bottom: 28px; right: 24px; border-bottom-width: 3px; border-right-width: 3px; }
 
 .rec {
   position: absolute;
@@ -939,7 +918,7 @@ div.gallery img {
   /* Hero */
   .hero {
     min-height: auto;
-    padding: 230px 20px 100px 20px;
+    padding: 230px 20px 60px 20px;
   }
 
   /* lighter decorations on small screens */
@@ -956,10 +935,6 @@ div.gallery img {
 
   .face i {
     font-size: 11px;
-  }
-
-  .film {
-    height: 48px;
   }
 
   .vf, .rec {
