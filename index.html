@@ -521,7 +521,7 @@ const conv = (t) => toVideo ? t.replace("Photography", "Videography").replace("P
   if (index === 0) section.open = true;
   const heading = document.createElement("summary");
   heading.className = "category-title";
-  heading.textContent = `${index + 1}. ${conv(category.title)}`;
+  heading.textContent = conv(category.title);
   const grid = document.createElement("div");
   grid.className = "services-grid";
   category.services.forEach(([rawName, icon], serviceIndex) => {
@@ -541,11 +541,9 @@ const conv = (t) => toVideo ? t.replace("Photography", "Videography").replace("P
     title.textContent = name;
     const number = document.createElement("span");
     number.className = "service-number";
-    number.textContent = String(
-      serviceCategories.slice(0, index).reduce((sum, item) => sum + item.services.length, 0) + serviceIndex + 1
-    ).padStart(3, "0");
+    number.textContent = String(...).padStart(3, "0");
     iconBox.appendChild(iconElement);
-    card.append(iconBox, number, title);
+    card.append(iconBox, title);
     grid.appendChild(card);
   });
   section.append(heading, grid);
