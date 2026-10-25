@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="services.css">
     <link rel="icon" href="images/retro_ants_media_favicon_32x32.png" type="image/png">
     <title>RETRO ANTS MEDIA is a professional wedding and event photography and videography company.</title>
 <meta name="description" content="RETRO ANTS MEDIA, digital marketing, website design services, app development services, 
@@ -143,40 +145,14 @@ SEO friendly website design,business website developers,ecommerce websites,corpo
 </div>
         </div>
     </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <h2>Our Services</h2>
-        <div class="services-list">
-            <div class="service-box">
-                <h3>Marketing</h3>
-            <ul>
-                <li>Strategic Marketing</li>
-                <li>Digital Marketing</li>
-                <li>Website Designing And Development</li>
-                <li>App Development</li>
-            </ul>
-            </div>
-            <div class="service-box">
-                <h3>Advertising</h3>
-                <ul>
-                    <li>Outdoor & Transit Advertising</li>
-                    <li>Google Ads</li>
-                    <li>Meta Ads</li>
-                </ul>
-            </div>
-                <div class="service-box">
-                    <h3>Media Services</h3>
-                <ul>
-                    <li>Photography</li>
-                    <li>Videography</li>
-                    <li>Cinematography</li>
-                    <li>Reels & Short Video Production</li>
-                    <li>Video Editing</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+<section class="services-section" id="services">
+  <div class="services-container">
+    <div class="section-heading">
+      <h2>Our Photography Services</h2>
+    </div>
+    <div id="services-list"></div>
+  </div>
+</section>
         <!-- why-choose-section -->
       <section id="whychooseus" class="why-choose-section">
         <h2>Why Choose us</h2>
@@ -479,17 +455,94 @@ SEO friendly website design,business website developers,ecommerce websites,corpo
         alert("There was an error sending the message.");
       });
   }
-    </script>
+const serviceCategories = [
+{title:"Wedding Photography",services:[
+["Traditional Wedding Photography","fa-camera"],["Candid Wedding Photography","fa-heart"],["Wedding Ceremony Photography","fa-champagne-glasses"],["Wedding Reception Photography","fa-wine-glass"],["Bridal Portrait Photography","fa-crown"],["Groom Portrait Photography","fa-user-tie"]]},
+{title:"Pre-Wedding & Engagement Photography",services:[
+["Pre-Wedding Photoshoot","svg-prewedding"],["Engagement Photography","fa-ring"],["Couple Portrait Photography","svg-couple"],["Proposal Photography","fa-gift"],["Roka Ceremony Photography","fa-hands-clapping"],["Ring Ceremony Photography","fa-ribbon"],["Anniversary Couple Photography","fa-heart-pulse"],["Romantic Couple Photoshoot","fa-face-kiss-wink-heart"]]},
+{title:"Wedding Event Photography",services:[
+["Haldi Ceremony Photography","fa-sun"],["Mehendi Ceremony Photography","fa-hand-sparkles"],["Sangeet Ceremony Photography","fa-music"],["Cocktail Party Photography","fa-martini-glass-citrus"],["Bachelor Party Photography","fa-martini-glass"],["Bachelorette Party Photography","fa-wand-magic-sparkles"],["Welcome Party Photography","fa-door-open"],["Wedding Rehearsal Photography","fa-clapperboard"],["Baraat Photography","fa-horse"],["Jaimala Ceremony Photography","fa-spa"],["Pellikuthuru Ceremony Photography","fa-person-dress"],["Pellikoduku Ceremony Photography","svg-groom"],["Muhurtham Photography","fa-hourglass-half"],["Vidaai Ceremony Photography","fa-hand"],["Post-Wedding Photography","fa-suitcase-rolling"]]},
+{title:"Birthday & Family Event Photography",services:[
+["First Birthday Photography","fa-cake-candles"],["Kids’ Birthday Photography","fa-child"],["Adult Birthday Photography","fa-face-smile"],["Milestone Birthday Photography","fa-calendar-days"],["Birthday Party Photography","fa-gifts"],["Cake Smash Photography","fa-cookie"],["Baby Shower Photography","svg-bottle"],["Maternity Celebration Photography","fa-seedling"],["Naming Ceremony Photography","fa-signature"],["Family Portrait Photography","fa-people-roof"],["Family Reunion Photography","fa-users"],["Anniversary Celebration Photography","fa-medal"],["Retirement Party Photography","fa-mug-hot"],["Surprise Party Photography","fa-burst"],["House Warming Ceremony Photography","fa-house-chimney-window"],["Half Saree Photography","svg-halfsaree"],["Dhoti Photography","svg-dhoti"]]},
+{title:"Baby & Newborn Photography",services:[
+["Newborn Photography","fa-baby-carriage"],["Baby Portrait Photography","fa-face-grin-beam"],["Infant Photography","fa-bed"],["Monthly Baby Milestone Photography","fa-calendar-check"],["Sitter Session Photography","fa-chair"],["Toddler Photography","fa-person-walking"],["Mother and Baby Photography","fa-person-breastfeeding"],["Father and Baby Photography","svg-father-baby"],["Sibling Photography","fa-children"],["Family Lifestyle Photography","fa-house"]]},
+{title:"Portrait & Personal Photography",services:[
+["Individual Portrait Photography","fa-user"],["Professional Headshot Photography","fa-id-card"],["Corporate Headshot Photography","fa-id-badge"],["Personal Branding Photography","fa-address-card"],["Fashion Portrait Photography","fa-shirt"],["Model Portfolio Photography","fa-images"],["Creative Concept Photography","fa-lightbulb"],["Outdoor Portrait Photography","fa-tree"]]},
+{title:"Corporate & Business Photography",services:[
+["Corporate Event Photography","fa-briefcase"],["Conference Photography","fa-microphone"],["Seminar Photography","fa-chalkboard-user"],["Business Meeting Photography","fa-handshake"],["Office Photography","fa-building"],["Executive Portrait Photography","fa-user-shield"],["Employee Portrait Photography","fa-user-group"],["Product Launch Photography","fa-rocket"],["Award Ceremony Photography","fa-trophy"]]},
+{title:"Commercial & Product Photography",services:[
+["Product Photography","fa-box"],["E-commerce Product Photography","fa-cart-shopping"],["Jewellery Photography","fa-gem"],["Clothing Photography","fa-tags"],["Fashion Photography","fa-glasses"],["Food Photography","fa-utensils"],["Restaurant Photography","fa-burger"],["Menu Photography","fa-book-open"],["Advertising Photography","fa-bullhorn"],["Brand Campaign Photography","fa-chart-line"]]},
+{title:"Real Estate & Architecture Photography",services:[
+["Real Estate Photography","fa-key"],["Interior Photography","fa-couch"],["Exterior Photography","fa-house-chimney"],["Architectural Photography","fa-drafting-compass"],["Residential Property Photography","fa-house-user"],["Commercial Property Photography","fa-city"],["Hotel Photography","fa-hotel"],["Resort Photography","fa-umbrella-beach"]]},
+{title:"Travel, Nature & Outdoor Photography",services:[
+["Travel Photography","fa-earth-asia"],["Landscape Photography","fa-mountain-sun"],["Nature Photography","fa-leaf"],["Wildlife Photography","fa-paw"],["Bird Photography","fa-dove"],["Street Photography","fa-street-view"],["Adventure Photography","fa-person-hiking"],["Tourism Photography","fa-map-location-dot"],["Pet Photography","fa-dog"]]},
+{title:"Cultural, Religious & Community Photography",services:[
+["Religious Ceremony Photography","fa-hands-praying"],["Satyanarayana Swamy Photography","fa-om"],["Festival Photography","fa-icons"],["Cultural Event Photography","fa-masks-theater"],["Community Event Photography","fa-people-group"]]},
+{title:"Education Photography",services:[
+["School Event Photography","fa-school"],["College Event Photography","fa-building-columns"],["Graduation Ceremony Photography","fa-graduation-cap"],["Graduation Portrait Photography","fa-scroll"],["College Student Portrait Photography","fa-user-graduate"],["Annual Day Photography","fa-flag"]]},
+{title:"Specialized Photography",services:[
+["Drone Aerial Photography","svg-drone"],["360-Degree Photography","fa-vr-cardboard"],["Time-Lapse Photography","fa-stopwatch"],["Documentary Photography","fa-film"],["Photojournalism","fa-newspaper"],["Fine Art Photography","fa-palette"]]},
+{title:"Rural Photography",services:[
+["Village Life Photography","fa-tractor"],["Village Events Photography","fa-wheat-awn"]]},
+{title:"Medical & Healthcare Photography",services:[
+["Hospital Photography","fa-hospital"],["Doctor Portrait Photography","fa-user-doctor"]]},
+{title:"Industrial & Manufacturing Photography",services:[
+["Factory Photography","fa-industry"],["Manufacturing Process Photography","fa-gears"],["Industrial Equipment Photography","fa-screwdriver-wrench"]]},
+{title:"Sports Photography",services:[
+["Sports Event Photography","fa-futbol"]]},
+{title:"Public & Social Impact Photography",services:[
+["NGO Event Photography","fa-hand-holding-heart"],["Charity Event Photography","fa-handshake-angle"],["Government Event Photography","fa-landmark"]]}
+];
+
+const customIcons = {
+  "svg-drone": `<svg viewBox="0 0 24 24"><rect x="9" y="10" width="6" height="4" rx="1.5"/><path d="M9.5 11 5 7.5M14.5 11 19 7.5M9.5 13 5 16.5M14.5 13 19 16.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><ellipse cx="4.5" cy="6.5" rx="3.5" ry="1.2"/><ellipse cx="19.5" cy="6.5" rx="3.5" ry="1.2"/><ellipse cx="4.5" cy="17.5" rx="3.5" ry="1.2"/><ellipse cx="19.5" cy="17.5" rx="3.5" ry="1.2"/><circle cx="12" cy="16" r="1.5"/></svg>`,
+  "svg-father-baby": `<svg viewBox="0 0 24 24"><circle cx="8" cy="5.5" r="3"/><path d="M3 21v-6a5 5 0 0 1 10 0v6z"/><circle cx="18" cy="12" r="2.3"/><path d="M14.5 21v-3.2a3.5 3.5 0 0 1 7 0V21z"/></svg>`,
+  "svg-couple": `<svg viewBox="0 0 24 24"><circle cx="7" cy="5" r="2.6"/><path d="M3 21v-7a4 4 0 0 1 8 0v7z"/><circle cx="17" cy="5" r="2.6"/><path d="M17 9.5 12.3 21h9.4z"/></svg>`,
+  "svg-groom": `<svg viewBox="0 0 24 24"><circle cx="12" cy="6" r="3.5"/><path fill-rule="evenodd" d="M4 22v-3c0-3.2 3.5-5 8-5s8 1.8 8 5v3zM6.6 16.2a.9.9 0 1 0 1.8 0a.9.9 0 1 0-1.8 0zM7.3 18.2a.9.9 0 1 0 1.8 0a.9.9 0 1 0-1.8 0zM8.9 19.6a.9.9 0 1 0 1.8 0a.9.9 0 1 0-1.8 0zM11.1 20.1a.9.9 0 1 0 1.8 0a.9.9 0 1 0-1.8 0zM13.3 19.6a.9.9 0 1 0 1.8 0a.9.9 0 1 0-1.8 0zM14.9 18.2a.9.9 0 1 0 1.8 0a.9.9 0 1 0-1.8 0zM15.6 16.2a.9.9 0 1 0 1.8 0a.9.9 0 1 0-1.8 0z"/></svg>`,
+  "svg-bottle": `<svg viewBox="0 0 24 24"><path d="M12 1.5c-1.2 0-2 .9-2 2v1h4v-1c0-1.1-.8-2-2-2z"/><path d="M8 6.5h8v2H8z"/><path fill-rule="evenodd" d="M8.5 9.5h7c.8 0 1.5.7 1.5 1.5v9.5c0 1-.8 2-2 2H9c-1.2 0-2-1-2-2V11c0-.8.7-1.5 1.5-1.5zM9 13h2.5v1.2H9zM9 16h2.5v1.2H9zM9 19h2.5v1.2H9z"/></svg>`,
+  "svg-prewedding": `<svg viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 7h4l1.5-2h7L17 7h4v13H3zM12 8.2a5 5 0 1 0 0 10 5 5 0 0 0 0-10z"/><path d="M12 17.2c-.2 0-4-2.4-4-5.1 0-1.5 1.1-2.4 2.2-2.4.8 0 1.4.4 1.8 1 .4-.6 1-1 1.8-1 1.1 0 2.2.9 2.2 2.4 0 2.7-3.8 5.1-4 5.1z"/></svg>`,
+  "svg-halfsaree": `<svg viewBox="0 0 24 24"><circle cx="12" cy="4.5" r="2.7"/><path fill-rule="evenodd" d="M12 8c-2 0-3.5 1.2-3.5 3l.7 3L5 22h14l-4.2-8 .7-3c0-1.8-1.5-3-3.5-3zM9.2 11l1-.7 5 4.2-1.2.7z"/></svg>`,
+  "svg-dhoti": `<svg viewBox="0 0 24 24"><circle cx="12" cy="4.5" r="2.7"/><path fill-rule="evenodd" d="M8 8.5h8l1 6.5H7zM9 10l1-.8 5.2 4.4-1 .8z"/><path d="M7.5 15.6h9l1.3 6.4h-4.6l-1.2-3.8-1.2 3.8H6.2z"/></svg>`
+};
+
+const servicesList = document.getElementById("services-list");
+serviceCategories.forEach((category, index) => {
+  const section = document.createElement("div");
+  section.className = "service-category";
+  const heading = document.createElement("h3");
+  heading.className = "category-title";
+  heading.textContent = `${index + 1}. ${category.title}`;
+  const grid = document.createElement("div");
+  grid.className = "services-grid";
+  category.services.forEach(([name, icon], serviceIndex) => {
+    const card = document.createElement("a");
+    card.className = "service-box";
+    card.href = "#contact";
+    card.setAttribute("aria-label", name);
+    const iconBox = document.createElement("div");
+    iconBox.className = "service-icon";
+    const isCustom = icon.startsWith("svg-");
+    const iconElement = document.createElement(isCustom ? "span" : "i");
+    if (isCustom) { iconElement.className = "custom-icon"; iconElement.innerHTML = customIcons[icon]; }
+    else { iconElement.className = `fa-solid ${icon}`; }
+    iconElement.setAttribute("aria-hidden", "true");
+    const title = document.createElement("h4");
+    title.textContent = name;
+    const number = document.createElement("span");
+    number.className = "service-number";
+    number.textContent = String(
+      serviceCategories.slice(0, index).reduce((sum, item) => sum + item.services.length, 0) + serviceIndex + 1
+    ).padStart(3, "0");
+    iconBox.appendChild(iconElement);
+    card.append(iconBox, number, title);
+    grid.appendChild(card);
+  });
+  section.append(heading, grid);
+  servicesList.appendChild(section);
+});
+</script>
     </body>
 </html>
-
-
-
-
-
-
-
-
 
 
 
