@@ -463,12 +463,11 @@ nav a.active {
   line-height: 1.4;
   text-align: justify;
 }
-  .services-section {
+services-section {
   --bg: #f7f7f7;
   --card: #fff;
   --text: #171717;
   --border: #dedede;
-  --num: #999;
   --accent: #ed3038;
   padding: 70px 20px;
   background: var(--bg);
@@ -508,7 +507,7 @@ nav a.active {
   border-bottom: 2px solid var(--accent);
 }
  
-/* dropdown (details / summary) */
+/* dropdown */
 .service-category {
   margin-bottom: 14px;
 }
@@ -527,14 +526,17 @@ nav a.active {
   background: var(--card);
   border: 1px solid var(--border);
   border-left: 4px solid var(--accent);
+  border-right: 4px solid var(--accent);
   border-radius: 12px;
 }
  
-.category-title::-webkit-details-marker {
+/* closed by default, first one is open (class "open" is added by the script) */
+.service-category .services-grid {
   display: none;
 }
  
-details[open] > .services-grid {
+.service-category.open .services-grid {
+  display: grid;
   margin-top: 16px;
 }
  
@@ -1107,7 +1109,6 @@ div.gallery img {
     font-size: 16px;
     padding: 12px 14px;
   }
-
   /* Why choose us */
   .benefit-list {
     grid-template-columns: 1fr;
