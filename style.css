@@ -463,7 +463,7 @@ nav a.active {
   line-height: 1.4;
   text-align: justify;
 }
-services-section {
+.services-section {
   --bg: #f7f7f7;
   --card: #fff;
   --text: #171717;
