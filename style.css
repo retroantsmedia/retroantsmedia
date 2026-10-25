@@ -241,18 +241,6 @@ nav a.active {
 }
 
 /* ----- hero content ----- */
-.hero-badge {
-  display: inline-block;
-  padding: 8px 18px;
-  margin-bottom: 22px;
-  border: 1px solid #ffd54f;
-  border-radius: 50px;
-  background: rgba(255, 213, 79, 0.12);
-  color: #ffd54f;
-  font-size: 14px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-}
 
 .hero h1 {
   font-size: 56px;
@@ -1022,11 +1010,6 @@ div.gallery img {
 
   .hero-bg .extra {
     display: none;
-  }
-
-  .hero-badge {
-    font-size: 12px;
-    padding: 6px 14px;
   }
 
   .hero h1 {
