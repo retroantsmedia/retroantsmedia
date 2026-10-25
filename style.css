@@ -526,7 +526,6 @@ nav a.active {
   background: var(--card);
   border: 1px solid var(--border);
   border-left: 4px solid var(--accent);
-  border-right: 4px solid var(--accent);
   border-radius: 12px;
 }
  
