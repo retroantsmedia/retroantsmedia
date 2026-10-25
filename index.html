@@ -148,9 +148,12 @@ SEO friendly website design,business website developers,ecommerce websites,corpo
 <section class="services-section" id="services">
   <div class="services-container">
     <div class="section-heading">
-      <h2>Our Photography Services</h2>
+      <h2>Our Photography &amp; Videography Services</h2>
     </div>
-    <div id="services-list"></div>
+    <div class="services-split">
+      <div class="services-panel"><h3 class="panel-title">Photography</h3><div id="services-list"></div></div>
+      <div class="services-panel"><h3 class="panel-title">Videography</h3><div id="videography-list"></div></div>
+    </div>
   </div>
 </section>
         <!-- why-choose-section -->
@@ -505,19 +508,28 @@ const customIcons = {
   "svg-dhoti": `<svg viewBox="0 0 24 24"><circle cx="12" cy="4.5" r="2.7"/><path fill-rule="evenodd" d="M8 8.5h8l1 6.5H7zM9 10l1-.8 5.2 4.4-1 .8z"/><path d="M7.5 15.6h9l1.3 6.4h-4.6l-1.2-3.8-1.2 3.8H6.2z"/></svg>`
 };
 
-const servicesList = document.getElementById("services-list");
-serviceCategories.forEach((category, index) => {
-  const section = document.createElement("div");
+const videoExtras = [
+{title:"Short Movies, Reels, Tutorial & BTS Videography",services:[
+["Short Movie Videography","fa-video"],["Reels Videography","fa-mobile-screen-button"],["Tutorial Videography","fa-circle-play"],["BTS Videography","fa-eye"]]}
+];
+
+function renderServices(listId, toVideo) {
+const servicesList = document.getElementById(listId);
+const conv = (t) => toVideo ? t.replace("Photography", "Videography").replace("Photoshoot", "Videography").replace("Photojournalism", "Videojournalism") : t;
+(toVideo ? serviceCategories.concat(videoExtras) : serviceCategories).forEach((category, index) => {
+  const section = document.createElement("details");
   section.className = "service-category";
-  const heading = document.createElement("h3");
+  if (index === 0) section.open = true;
+  const heading = document.createElement("summary");
   heading.className = "category-title";
-  heading.textContent = `${index + 1}. ${category.title}`;
+  heading.textContent = `${index + 1}. ${conv(category.title)}`;
   const grid = document.createElement("div");
   grid.className = "services-grid";
-  category.services.forEach(([name, icon], serviceIndex) => {
+  category.services.forEach(([rawName, icon], serviceIndex) => {
+    const name = conv(rawName);
     const card = document.createElement("a");
     card.className = "service-box";
-    card.href = "#contact";
+    card.href = "#contactus";
     card.setAttribute("aria-label", name);
     const iconBox = document.createElement("div");
     iconBox.className = "service-icon";
@@ -540,6 +552,9 @@ serviceCategories.forEach((category, index) => {
   section.append(heading, grid);
   servicesList.appendChild(section);
 });
+}
+renderServices("services-list", false);
+renderServices("videography-list", true);
 </script>
     </body>
 </html>
