@@ -453,7 +453,7 @@ nav a.active {
 .box h2 {
   margin-bottom: 10px;
   color: #2D7D46;
-  font-size: 26px;
+  font-size: 21px;
   text-align: center;
 }
 
@@ -469,7 +469,7 @@ nav a.active {
   --text: #171717;
   --border: #dedede;
   --accent: #ed3038;
-  padding: 70px 20px;
+  padding: 50px 20px;
   background: var(--bg);
   font-family: Arial, sans-serif;
 }
