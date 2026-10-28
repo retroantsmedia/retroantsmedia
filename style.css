@@ -438,7 +438,7 @@ nav a.active {
   margin: 20px 0;
   border-radius: 12px;
   color: white;
-  background: white;
+  background: #f7f7f7;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   max-width: 600px;
   flex: 1;
@@ -452,7 +452,7 @@ nav a.active {
 
 .box h2 {
   margin-bottom: 10px;
-  color: #2D7D46;
+  color: #ed3038;
   font-size: 21px;
   text-align: center;
 }
