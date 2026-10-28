@@ -403,7 +403,7 @@ nav a.active {
 .about {
   text-align: justify;
   padding: 20px;
-  background: linear-gradient(to right, #28a745, #43a4c9);
+  background:#f7f7f7;
 }
 
 .about h2 {
