@@ -577,6 +577,27 @@ const conv = (t) => toVideo ? t.replace("Photography", "Videography").replace("P
 }
 renderServices("services-list", false);
 renderServices("videography-list", true);
+document.addEventListener("DOMContentLoaded", function () {
+
+    const features = document.querySelectorAll(".feature");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.15
+    });
+
+    features.forEach((feature, index) => {
+        feature.style.transitionDelay = `${index * 0.12}s`;
+        observer.observe(feature);
+    });
+
+});
 </script>
     </body>
 </html>
