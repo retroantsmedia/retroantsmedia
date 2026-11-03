@@ -747,12 +747,12 @@ nav a.active {
 }
 section {
   width: 100%;
-  padding: 64px 0;
+  padding: 50px 0;
 }
 
 .eyebrow {
   margin: 0px;
-  padding: 0 24px;
+  padding: 25px 24px;
   color: var(--red);
   font-size: 14px;
   font-weight: 700;
