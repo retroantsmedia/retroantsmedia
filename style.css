@@ -656,7 +656,9 @@ nav a.active {
     gap: 25px;
     padding: 30px 0;
     border-top: 1px solid #dedede;
-    transition: transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(35px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
 .feature:hover {
@@ -682,6 +684,18 @@ nav a.active {
     line-height: 1.8;
     margin: 0;
     max-width: 350px;
+}
+.feature.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .feature {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
 }
 .benefit-list {
   display: grid;
