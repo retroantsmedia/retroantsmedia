@@ -751,12 +751,13 @@ section {
 }
 
 .eyebrow {
-  margin: 0 0 32px;
+  margin: 0px;
   padding: 0 24px;
   color: var(--red);
   font-size: 14px;
   font-weight: 700;
   letter-spacing: .22em;
+  text-align:center;
   text-transform: uppercase;
 }
 
