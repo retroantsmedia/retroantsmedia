@@ -740,41 +740,78 @@ nav a.active {
 /* ==========================================================
    TRUSTED CLIENTS
    ========================================================== */
-.trusted-clients {
-  background: linear-gradient(to right, #28a745, #43a4c9);
-  padding: 20px 0;
-  margin: 0 auto;
+:root {
+  --ink: #171717;
+  --red: #ed3038;
 }
 
-.trusted-clients h1 {
-  font-size: 32px;
-  text-align: center;
-  color: #000000;
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: var(--ink);
+  background: #f7f7f7;
 }
 
-div.gallery {
-  border: 1px solid #000;
-  margin: 0 0 30px 0;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-div.gallery img {
+section {
   width: 100%;
-  height: auto;
-  display: block;
+  padding: 64px 0;
 }
 
-.responsive {
-  padding: 20px 6px;
-  float: left;
-  width: 25%;
+.eyebrow {
+  margin: 0 0 32px;
+  padding: 0 24px;
+  color: var(--red);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .22em;
+  text-transform: uppercase;
 }
 
-.clearfix::after {
+/* scrolling strip */
+.marquee {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  animation: scroll 32s linear infinite; /* change 32s to adjust speed */
+}
+
+.group {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.item {
+  position: relative;
+  padding: 0 28px;
+  font-size: clamp(20px, 3vw, 30px);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* red dot between names */
+.item::after {
   content: "";
-  display: table;
-  clear: both;
+  position: absolute;
+  right: -4px;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  margin-top: -4px;
+  border-radius: 50%;
+  background: var(--red);
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
 }
 
 /* ==========================================================
