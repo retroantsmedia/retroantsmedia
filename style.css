@@ -610,22 +610,79 @@ nav a.active {
 /* ==========================================================
    WHY CHOOSE US
    ========================================================== */
-.why-choose-section {
-  max-width: 1200px;
-  margin: 50px auto;
-  padding: 30px;
-  background: #28a745;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  text-align: center;
+.why-us {
+    background: #f7f7f7;
+    padding: 90px 8%;
+    font-family: Arial, sans-serif;
+    color: #171717;
 }
 
-.why-choose-section h2 {
-  color: #000000;
-  font-size: 32px;
-  margin-bottom: 20px;
+.why-header {
+    max-width: 650px;
+    margin-bottom: 55px;
 }
 
+.section-label {
+    color: #ed3038;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.why-header h2 {
+    font-size: clamp(32px, 5vw, 48px);
+    margin: 15px 0;
+    font-weight: 700;
+}
+
+.why-header h2 span {
+    color: #ed3038;
+}
+
+.why-header p {
+    color: #777;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 70px;
+}
+
+.feature {
+    display: flex;
+    gap: 25px;
+    padding: 30px 0;
+    border-top: 1px solid #dedede;
+    transition: transform 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateX(8px);
+}
+
+.number {
+    color: #ed3038;
+    font-size: 25px;
+    font-weight: 700;
+    min-width: 35px;
+}
+
+.feature h3 {
+    font-size: 20px;
+    margin: 0 0 10px;
+    font-weight: 600;
+}
+
+.feature p {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 0;
+    max-width: 350px;
+}
 .benefit-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1109,22 +1166,45 @@ div.gallery img {
     padding: 12px 14px;
   }
   /* Why choose us */
-  .benefit-list {
-    grid-template-columns: 1fr;
-  }
+    .why-us {
+        padding: 60px 5%;
+    }
 
-  .benefit-item h3 {
-    font-size: 21px;
-  }
+    .why-header {
+        margin-bottom: 35px;
+    }
 
-  .why-choose-section {
-    margin: 20px 0;
-  }
+    .why-header h2 {
+        font-size: 32px;
+    }
 
-  .why-choose-section h2 {
-    margin: 0;
-  }
+    .why-header p {
+        font-size: 14px;
+    }
 
+    .features {
+        grid-template-columns: 1fr;
+        column-gap: 0;
+    }
+
+    .feature {
+        gap: 15px;
+        padding: 22px 0;
+    }
+
+    .number {
+        font-size: 22px;
+        min-width: 30px;
+    }
+
+    .feature h3 {
+        font-size: 18px;
+    }
+
+    .feature p {
+        font-size: 13px;
+        line-height: 1.7;
+    }
   /* Trusted clients */
   .trusted-clients h1 {
     font-size: 25px;
@@ -1221,3 +1301,4 @@ div.gallery img {
 @keyframes blink {
   50% { opacity: 0; }
 }
+
