@@ -128,20 +128,44 @@
         <h2>About Us</h2>
         <p>RETRO ANTS MEDIA is a professional photography and videography company dedicated to capturing life’s special moments. We offer wedding, engagement, pre-wedding, post-wedding, reception, maternity, newborn, baby shower, birthday, anniversary, housewarming, puja, portrait, personal, corporate, business, product, commercial, travel, nature, outdoor, cultural, religious, community, and event photography and videography. Our experienced and creative team understands each customer’s requirements and provides personalized services with attention to detail. With a simple, hassle-free process, we deliver high-quality visuals while ensuring a smooth experience and complete customer satisfaction.</p>
 <br>
-
     </section>
     <!-- VISION & MISSION SECTION -->
-    <section class="container">
-        <div class="box vision">
-            <h2>Our Vision</h2>
-            <p>Our vision is to become a trusted leader photography and videography by creating innovative services and products that empower individuals and professionals across the media industry to enhance creativity, simplify workflows, and achieve success.</p>
-        </div>
-        <div class="box mission">
-            <h2>Our Mission</h2>
-            <p>Our mission is to deliver creative, high-quality photography and videography services and products by combining unique ideas, innovative concepts, advanced technology, professional skills, quality equipment, and talented people. We strive to transform creative visions into reality through innovation, expertise, teamwork, and a commitment to excellence, providing reliable solutions that meet the evolving needs of the media industry.</p></p>
-</div>
-        </div>
-    </section>
+    <section class="vm-section" id="vision-mission">
+  <div class="vm-grid">
+
+    <article class="vm-card">
+      <svg class="vm-ghost" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M1.5 12S5.5 5 12 5s10.5 7 10.5 7-4 7-10.5 7S1.5 12 1.5 12z"/>
+        <circle cx="12" cy="12" r="3"/>
+      </svg>
+      <div class="vm-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <path d="M1.5 12S5.5 5 12 5s10.5 7 10.5 7-4 7-10.5 7S1.5 12 1.5 12z"/>
+          <circle cx="12" cy="12" r="3"/>
+        </svg>
+      </div>
+      <h3>Our Vision</h3>
+      <p>Our vision is to become a trusted leader photography and videography by creating innovative services and products that empower individuals and professionals across the media industry to enhance creativity, simplify workflows, and achieve success.</p>
+    </article>
+
+    <article class="vm-card">
+      <svg class="vm-ghost" viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="12" r="9"/>
+        <circle cx="12" cy="12" r="5"/>
+        <circle cx="12" cy="12" r="1.2"/>
+      </svg>
+      <div class="vm-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="9"/>
+          <circle cx="12" cy="12" r="5"/>
+          <circle cx="12" cy="12" r="1.2"/>
+        </svg>
+      </div>
+      <h3>Our Mission</h3>
+      <p>Our mission is to deliver creative, high-quality photography and videography services and products by combining unique ideas, innovative concepts, advanced technology, professional skills, quality equipment, and talented people. We strive to transform creative visions into reality through innovation, expertise, teamwork, and a commitment to excellence, providing reliable solutions that meet the evolving needs of the media industry.</p>
+    </article>
+  </div>
+</section>
 <section class="services-section" id="services">
   <div class="services-container">
     <div class="section-heading">
@@ -597,11 +621,37 @@ document.addEventListener("DOMContentLoaded", function () {
   }, { threshold: 0.3 });
 
   observer.observe(aboutSection);
+  (function () {
+    var section = document.querySelector('.vm-section');
+    if (!section) return;
+
+    // Reveal when the section scrolls into view
+    if (!('IntersectionObserver' in window)) {
+      section.classList.add('visible');
+    } else {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            e.target.classList.add('visible');
+            io.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.25 });
+      io.observe(section);
+    }
+
+    // Cursor spotlight on each card
+    document.querySelectorAll('.vm-card').forEach(function (card) {
+      card.addEventListener('pointermove', function (e) {
+        var r = card.getBoundingClientRect();
+        card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+        card.style.setProperty('--my', (e.clientY - r.top) + 'px');
+      });
+    });
+  })();
 </script>
-    </body>
+</body>
 </html>
-
-
 
 
 
