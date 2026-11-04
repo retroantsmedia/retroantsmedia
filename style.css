@@ -277,17 +277,6 @@ nav a.active {
   50%      { box-shadow: 0 14px 34px rgba(237, 48, 56, .45), 0 0 0 14px rgba(237, 48, 56, 0), 0 0 0 1px rgba(255, 255, 255, .18) inset; }
 }
 
-/* Mobile */
-@media (max-width: 768px) {
-  .hero { min-height: 80vh; padding: 64px 20px; }
-  .svc { width: 160px; height: 112px; font-size: 11px; letter-spacing: 1.5px; }
-  .svc i { font-size: 34px; }
-  .g1, .g2 { width: 340px; height: 340px; }
-  .g3 { width: 260px; height: 260px; }
-  .hero h1 { margin-bottom: 30px; }
-  .cta { font-size: 17px; padding: 15px 28px 15px 22px; }
-}
-
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .cta { opacity: 1; translate: none; animation: none; }
@@ -1333,39 +1322,13 @@ section {
     padding: 230px 20px 60px 20px;
   }
 
-  /* lighter decorations on small screens */
-
-  .wall {
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 100px;
-    gap: 12px;
-  }
-
-  .face b {
-    font-size: 34px;
-  }
-
-  .face i {
-    font-size: 11px;
-  }
-
-  .vf, .rec {
-    display: none;
-  }
-
-  .hero-bg .extra {
-    display: none;
-  }
-
-  .hero h1 {
-    font-size: 32px;
-  }
-
-  .cta-button {
-    padding: 12px 15px;
-    margin: 25px 0 0 0;
-    font-size: 15px;
-  }
+.hero { min-height: 80vh; padding: 64px 20px; }
+  .svc { width: 160px; height: 112px; font-size: 11px; letter-spacing: 1.5px; }
+  .svc i { font-size: 34px; }
+  .g1, .g2 { width: 340px; height: 340px; }
+  .g3 { width: 260px; height: 260px; }
+  .hero h1 { margin-bottom: 30px; }
+  .cta { font-size: 17px; padding: 15px 28px 15px 22px; }
 
   /* Slider */
   .slider {
