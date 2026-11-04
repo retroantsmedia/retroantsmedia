@@ -419,6 +419,29 @@ nav a.active {
   margin: 0 auto;
   font-size: 18px;
   line-height: 1.6;
+  transition-delay: 0.25s;
+}
+
+/* Hidden state before scrolling into view */
+.about h2,
+.about p {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+/* Visible state, added by JavaScript */
+.about.visible h2,
+.about.visible p {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .about h2,
+  .about p {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 /* ==========================================================
