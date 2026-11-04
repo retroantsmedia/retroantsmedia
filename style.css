@@ -655,7 +655,7 @@ nav a.active {
 .panel-title {
   margin: 0 0 16px;
   padding-bottom: 10px;
-  color: var(--text);
+  color: #ed3038;
   font-size: 24px;
   text-align: center;
   border-bottom: 2px solid var(--accent);
