@@ -209,18 +209,6 @@ nav a.active {
 .hero h1.done .caret { display: none; }
 
 .hero h1 .hl { position: relative; }
-.hero h1 .hl::after {
-  content: "";
-  position: absolute;
-  left: 0; right: 0; bottom: -.08em;
-  height: .09em;
-  border-radius: 4px;
-  background: var(--accent);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform .8s ease;
-}
-.hero h1.done .hl::after { transform: scaleX(1); }
 
 /* Button */
 .cta {
@@ -281,7 +269,6 @@ nav a.active {
   .cta { opacity: 1; translate: none; animation: none; }
   .hero h1 .ch { clip-path: none; transition: none; }
   .hero h1 .caret { display: none; }
-  .hero h1 .hl::after { transform: scaleX(1); transition: none; }
   .cta::before, .svc-track, .glow, .svc:hover i { animation: none; }
   .g3 { display: none; }
   .svc-bg { transform: rotate(-6deg) !important; transition: none; }
