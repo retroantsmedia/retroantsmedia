@@ -296,36 +296,6 @@
     </div>
   </div>
 </section>
-
-    <!-- Contact Section -->
-    <div id="contactus" class="contact-container">
-        <h2>Contact Us</h2>
-        <p class="contact-para">We’d love to hear from you! Get in touch for any inquiries or collaborations.</p>
-        <div class="contact-info">
-    <p><strong>Address:</strong> #225 Opp FCI Godown 4th Cross Vijinapura, Doorvaninagar, Bangalore, Karnataka - 560016.</p>
-    <p><strong>Phone:</strong> <a href="tel:9741467809">+91 9741467809</a></p>
-    <p><strong>Email:</strong> <a href="mailto:contact@retroantsmedia.com">contact@retroantsmedia.com</a></p>
-        </div>
-<!-- Success Message (Hidden by Default) -->
-<div id="success-message" class="success-message" style="display: none;">
-  Thank you! Your message has been sent successfully. We'll be reaching out to you soon.
-</div>
-<!-- Contact Form -->
-<form id="contactForm" class="contact-form" onsubmit="submitForm(event)">
-  <input type="text" id="name" name="name" placeholder="Your Name" required>
-  <input type="email" id="email" name="email" placeholder="Your Email" required>
-  <span id="email-error" class="error-message" style="display:none;">❌ Invalid email format</span>
-
-  <input type="tel" id="phone" name="phone" placeholder="Your Phone (Optional)">
-  <span id="phone-error" class="error-message" style="display:none;">❌ Mobile number must be 10 digits</span>
-
-  <textarea id="message" name="message" rows="4" placeholder="Tell us your project needs." required></textarea>
-  <button type="submit">Send Message</button>
-</form>
-</div>
-     <a href="https://wa.me/9741467809" class="whatsapp-chat" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"> Chat with us
-    </a>
      <!-- Footer Section -->
             <footer class="site-footer" id="footer">
   <div class="ft-grid">
@@ -458,88 +428,7 @@
                 });
             });
         });
-        document.getElementById("contactForm").addEventListener("submit", function(event) {
-            event.preventDefault(); // Prevent page refresh
 
-            // Get form values
-            let email = document.getElementById("email").value;
-            let phone = document.getElementById("phone").value;
-            let isValid = true;
-
-            // Validate Email
-            let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-            if (!emailPattern.test(email)) {
-                document.getElementById("email-error").style.display = "block";
-                isValid = false;
-            } else {
-                document.getElementById("email-error").style.display = "none";
-            }
-
-            // Validate Phone Number (if entered)
-            let phonePattern = /^[0-9]{10}$/;
-            if (phone && !phonePattern.test(phone)) {
-                document.getElementById("phone-error").style.display = "block";
-                isValid = false;
-            } else {
-                document.getElementById("phone-error").style.display = "none";
-            }
-
-            // If everything is valid, show success message
-            if (isValid) {
-                setTimeout(() => {
-                    document.getElementById("success-message").style.display = "block";
-                    document.getElementById("contactForm").reset();
-                }, 1000);
-            }
-        });
-  function submitForm(event) {
-    event.preventDefault(); // Prevent page reload
-
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const phone = document.getElementById("phone").value.trim();
-    const message = document.getElementById("message").value.trim();
-
-    const emailError = document.getElementById("email-error");
-    const phoneError = document.getElementById("phone-error");
-    const successMessage = document.getElementById("success-message");
-
-    // Validation
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const phonePattern = /^\d{10}$/;
-
-    emailError.style.display = emailPattern.test(email) ? "none" : "block";
-    phoneError.style.display = phone === "" || phonePattern.test(phone) ? "none" : "block";
-
-    if (!emailPattern.test(email) || (phone !== "" && !phonePattern.test(phone))) {
-      return;
-    }
-    const scriptURL = "https://script.google.com/macros/s/AKfycbxqWuAEaTwTv50Q5EqeEW8DNiZXVSijkwK9uBVZezE0y_0z-jl90ofeA_zmjCWOv1yM/exec";
-    const formData = new FormData();
-    formData.append("name", name);
-    formData.append("email", email);
-    formData.append("phone", phone);
-    formData.append("message", message);
-
-    fetch(scriptURL, {
-      method: "POST",
-      body: formData
-    })
-      .then(response => response.text())
-      .then(responseText => {
-        document.getElementById("contactForm").reset();
-        successMessage.style.display = "block";
-
-        // Hide message after 5 seconds
-        setTimeout(() => {
-          successMessage.style.display = "none";
-        }, 5000);
-      })
-      .catch(error => {
-        console.error("❌ Error!", error.message);
-        alert("There was an error sending the message.");
-      });
-  }
 const serviceCategories = [
 {title:"Wedding Photography",services:[
 ["Traditional Wedding Photography","fa-camera"],["Candid Wedding Photography","fa-heart"],["Wedding Ceremony Photography","fa-champagne-glasses"],["Wedding Reception Photography","fa-wine-glass"],["Bridal Portrait Photography","fa-crown"],["Groom Portrait Photography","fa-user-tie"]]},
