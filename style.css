@@ -8,6 +8,7 @@
 }
 html {
   scroll-behavior: smooth;
+scroll-padding-top: 100px;
 }
 
 body {
@@ -41,6 +42,8 @@ header {
   margin: 0 10px;
   border-radius: 9px;
 }
+
+header .logo { display: block; text-decoration: none; }
 
 .navigation {
   display: flex;
@@ -1155,6 +1158,8 @@ section {
    MOBILE  (everything below is inside ONE media query)
    ========================================================== */
 @media only screen and (max-width: 768px) {
+
+   html { scroll-padding-top: 230px; }
 
   /* Header / nav */
   header {
