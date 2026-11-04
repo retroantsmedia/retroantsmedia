@@ -727,81 +727,86 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   })();
 (function () {
-  var hero = document.querySelector('.hero');
-  if (!hero) return;
+  function initHero() {
+    var hero = document.querySelector('.hero');
+    if (!hero) return;
 
-  /* 1. Duplicate each row once so the scroll loops with no jump */
-  hero.querySelectorAll('.track').forEach(function (t) {
-    Array.prototype.slice.call(t.children).forEach(function (c) {
-      var k = c.cloneNode(true);
-      k.setAttribute('aria-hidden', 'true');
-      t.appendChild(k);
+    /* 1. Duplicate each row once so the scroll loops with no jump */
+    hero.querySelectorAll('.svc-track').forEach(function (t) {
+      Array.prototype.slice.call(t.children).forEach(function (c) {
+        var k = c.cloneNode(true);
+        k.setAttribute('aria-hidden', 'true');
+        t.appendChild(k);
+      });
     });
-  });
 
-  /* 2. Cursor glow and slight parallax on the background */
-  hero.addEventListener('pointermove', function (e) {
-    var r = hero.getBoundingClientRect();
-    var x = e.clientX - r.left, y = e.clientY - r.top;
-    hero.style.setProperty('--mx', x + 'px');
-    hero.style.setProperty('--my', y + 'px');
-    hero.style.setProperty('--px', ((x / r.width) - .5) * 2);
-    hero.style.setProperty('--py', ((y / r.height) - .5) * 2);
-    hero.classList.add('active');
-  });
-  hero.addEventListener('pointerleave', function () {
-    hero.classList.remove('active');
-    hero.style.setProperty('--px', 0);
-    hero.style.setProperty('--py', 0);
-  });
-
-  /* 3. Handwriting headline */
-  var h1 = hero.querySelector('h1');
-  var tw = h1.querySelector('.tw');
-  var chars = [];
-
-  (function split(node) {
-    Array.prototype.slice.call(node.childNodes).forEach(function (n) {
-      if (n.nodeType === 3) {
-        var frag = document.createDocumentFragment();
-        n.textContent.split('').forEach(function (c) {
-          var s = document.createElement('span');
-          s.className = 'ch';
-          s.textContent = c;
-          frag.appendChild(s);
-          chars.push(s);
-        });
-        node.replaceChild(frag, n);
-      } else if (n.nodeType === 1) {
-        split(n);
-      }
+    /* 2. Cursor glow and slight parallax */
+    hero.addEventListener('pointermove', function (e) {
+      var r = hero.getBoundingClientRect();
+      var x = e.clientX - r.left, y = e.clientY - r.top;
+      hero.style.setProperty('--mx', x + 'px');
+      hero.style.setProperty('--my', y + 'px');
+      hero.style.setProperty('--px', ((x / r.width) - .5) * 2);
+      hero.style.setProperty('--py', ((y / r.height) - .5) * 2);
+      hero.classList.add('active');
     });
-  })(tw);
+    hero.addEventListener('pointerleave', function () {
+      hero.classList.remove('active');
+      hero.style.setProperty('--px', 0);
+      hero.style.setProperty('--py', 0);
+    });
 
-  var caret = document.createElement('span');
-  caret.className = 'caret';
-  caret.setAttribute('aria-hidden', 'true');
+    /* 3. Headline written letter by letter, then the button appears */
+    var h1 = hero.querySelector('h1');
+    var tw = h1.querySelector('.tw');
+    var chars = [];
 
-  function finish() { h1.classList.add('done'); hero.classList.add('typed'); }
+    (function split(node) {
+      Array.prototype.slice.call(node.childNodes).forEach(function (n) {
+        if (n.nodeType === 3) {
+          var frag = document.createDocumentFragment();
+          n.textContent.split('').forEach(function (c) {
+            var s = document.createElement('span');
+            s.className = 'ch';
+            s.textContent = c;
+            frag.appendChild(s);
+            chars.push(s);
+          });
+          node.replaceChild(frag, n);
+        } else if (n.nodeType === 1) {
+          split(n);
+        }
+      });
+    })(tw);
 
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    chars.forEach(function (c) { c.classList.add('on'); });
-    finish();
-    return;
+    var caret = document.createElement('span');
+    caret.className = 'caret';
+    caret.setAttribute('aria-hidden', 'true');
+
+    function finish() { h1.classList.add('done'); hero.classList.add('typed'); }
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      chars.forEach(function (c) { c.classList.add('on'); });
+      finish();
+      return;
+    }
+
+    var i = 0;
+    function tick() {
+      if (i >= chars.length) { finish(); return; }
+      chars[i].classList.add('on');
+      chars[i].after(caret);
+      i++;
+      setTimeout(tick, 55 + Math.random() * 35);
+    }
+    setTimeout(tick, 400);
   }
 
-  var i = 0;
-  function tick() {
-    if (i >= chars.length) { finish(); return; }
-    chars[i].classList.add('on');
-    chars[i].after(caret);
-    i++;
-    setTimeout(tick, 70 + Math.random() * 40);
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initHero);
+  } else {
+    initHero();
   }
-
-  // wait for the handwriting font, then start writing
-  (document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve())
-    .then(function () { setTimeout(tick, 400); });
 })();
 </script>
 </body>
