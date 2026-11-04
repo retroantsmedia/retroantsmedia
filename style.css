@@ -285,7 +285,7 @@ nav a.active {
   margin: 0 0 0 calc(50% - 50vw);
   overflow: hidden;
   border-radius: 0;
-  background: #000;
+  background: #ed3038;
 }
 
 .slider input[type="radio"] {
