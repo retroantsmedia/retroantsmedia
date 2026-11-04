@@ -1232,7 +1232,7 @@ section {
   border-top: 1px solid rgba(255, 255, 255, .1);
   display: flex; align-items: center; justify-content: space-between; gap: 16px;
 }
-.ft-bottom p { margin: 0; font-size: 15px; }
+.ft-bottom p { margin: 0; font-size: 15px; text-align:center;}
 .to-top {
   width: 44px; height: 44px;
   border-radius: 50%;
