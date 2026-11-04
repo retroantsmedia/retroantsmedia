@@ -63,8 +63,6 @@ nav a.active {
   border-radius: 5px;
 }
 
-/* ----- hero content ----- */
-
 /* ===== HERO ===== */
 .hero {
   --accent: #ed3038;
@@ -77,14 +75,14 @@ nav a.active {
   padding: 80px 24px;
   overflow: hidden;
   text-align: center;
-  color: #1a1a1a;
+  color: #000;
   background: #f7f7f7;
   box-sizing: border-box;
 }
 .hero *, .hero *::before, .hero *::after { box-sizing: border-box; }
 
 /* Services background */
-.cards {
+.svc-bg {
   position: absolute;
   inset: -15% -10%;
   display: flex;
@@ -95,18 +93,18 @@ nav a.active {
   transform: rotate(-6deg) translate(calc(var(--px, 0) * -16px), calc(var(--py, 0) * -10px));
   transition: transform .5s ease-out;
 }
-.row { overflow: hidden; padding: 14px 0; margin: -14px 0; }
-.row:hover .track { animation-play-state: paused; }
-.track {
+.svc-row { overflow: hidden; padding: 14px 0; margin: -14px 0; }
+.svc-row:hover .svc-track { animation-play-state: paused; }
+.svc-track {
   display: flex;
   gap: 22px;
   padding-right: 22px;
   width: max-content;
-  animation: slide 60s linear infinite;
+  animation: svcSlide 60s linear infinite;
 }
-.row:nth-child(2) .track { animation-direction: reverse; animation-duration: 70s; }
-.row:nth-child(3) .track { animation-duration: 55s; }
-@keyframes slide { to { transform: translateX(-50%); } }
+.svc-row:nth-child(2) .svc-track { animation-direction: reverse; animation-duration: 70s; }
+.svc-row:nth-child(3) .svc-track { animation-duration: 55s; }
+@keyframes svcSlide { to { transform: translateX(-50%); } }
 
 .svc {
   flex: none;
@@ -134,7 +132,7 @@ nav a.active {
   font-size: 44px;
   line-height: 1;
   display: inline-block;
-  filter: brightness(0);          /* makes the icons solid black */
+  filter: brightness(0);
 }
 .svc:hover {
   transform: translateY(-8px) scale(1.07);
@@ -143,8 +141,8 @@ nav a.active {
   color: #fff;
   box-shadow: 0 16px 34px rgba(237, 48, 56, .35);
 }
-.svc:hover i { animation: pop .5s ease; }
-@keyframes pop { 40% { transform: scale(1.35) rotate(-8deg); } }
+.svc:hover i { animation: svcPop .5s ease; }
+@keyframes svcPop { 40% { transform: scale(1.35) rotate(-8deg); } }
 
 /* Colour glows */
 .glow {
@@ -187,14 +185,15 @@ nav a.active {
 }
 .hero-inner { position: relative; z-index: 2; max-width: 980px; }
 
-/* Headline: handwriting */
+/* Headline: Arial, black, written letter by letter */
 .hero h1 {
   margin: 0 0 38px;
-  font-family: "Caveat", "Segoe Script", "Brush Script MT", cursive;
-  font-size: clamp(3rem, 9vw, 6.4rem);
-  font-weight: 700;
-  line-height: 1.05;
-  letter-spacing: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(2.2rem, 5.6vw, 4.2rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -.5px;
+  color: #000;
 }
 .hero h1 .ch { clip-path: inset(-25% 100% -25% -10%); }
 .hero h1 .ch.on { clip-path: inset(-25% -10% -25% -10%); transition: clip-path .22s ease-out; }
@@ -202,8 +201,8 @@ nav a.active {
 .hero h1 .caret::after {
   content: "";
   position: absolute;
-  left: .04em; top: .62em;
-  width: .1em; height: .1em;
+  left: .04em; top: .55em;
+  width: .12em; height: .12em;
   border-radius: 50%;
   background: var(--accent);
   box-shadow: 0 0 14px 3px rgba(237, 48, 56, .55);
@@ -214,7 +213,7 @@ nav a.active {
 .hero h1 .hl::after {
   content: "";
   position: absolute;
-  left: 0; right: 0; bottom: -.06em;
+  left: 0; right: 0; bottom: -.08em;
   height: .09em;
   border-radius: 4px;
   background: var(--accent);
@@ -235,6 +234,7 @@ nav a.active {
   border-radius: 999px;
   text-decoration: none;
   color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 19px;
   font-weight: 600;
   letter-spacing: .2px;
@@ -257,22 +257,22 @@ nav a.active {
   width: 40%;
   background: linear-gradient(100deg, transparent, rgba(255, 255, 255, .45), transparent);
   transform: skewX(-20deg);
-  animation: shine 4.5s ease-in-out 2.4s infinite;
+  animation: ctaShine 4.5s ease-in-out 2.4s infinite;
 }
 .cta:hover, .cta:focus-visible {
   transform: translateY(-4px) scale(1.04);
   box-shadow: 0 20px 44px rgba(237, 48, 56, .6), 0 0 0 1px rgba(255, 255, 255, .25) inset;
 }
 .cta:hover svg { transform: rotate(-8deg) scale(1.12); }
-.cta:focus-visible { outline: 3px solid #1a1a1a; outline-offset: 4px; }
+.cta:focus-visible { outline: 3px solid #000; outline-offset: 4px; }
 
 /* Button appears after the headline is written */
 @keyframes ctaIn { to { opacity: 1; translate: 0 0; } }
 .hero.typed .cta {
-  animation: ctaIn .8s cubic-bezier(.2, .8, .2, 1) forwards, glow 2.8s ease-in-out 1s infinite;
+  animation: ctaIn .8s cubic-bezier(.2, .8, .2, 1) forwards, ctaGlow 2.8s ease-in-out 1s infinite;
 }
-@keyframes shine { 0% { left: -60%; } 35%, 100% { left: 140%; } }
-@keyframes glow {
+@keyframes ctaShine { 0% { left: -60%; } 35%, 100% { left: 140%; } }
+@keyframes ctaGlow {
   0%, 100% { box-shadow: 0 14px 34px rgba(237, 48, 56, .45), 0 0 0 0 rgba(237, 48, 56, .5), 0 0 0 1px rgba(255, 255, 255, .18) inset; }
   50%      { box-shadow: 0 14px 34px rgba(237, 48, 56, .45), 0 0 0 14px rgba(237, 48, 56, 0), 0 0 0 1px rgba(255, 255, 255, .18) inset; }
 }
@@ -283,15 +283,10 @@ nav a.active {
   .hero h1 .ch { clip-path: none; transition: none; }
   .hero h1 .caret { display: none; }
   .hero h1 .hl::after { transform: scaleX(1); transition: none; }
-  .cta::before, .track, .glow, .svc:hover i { animation: none; }
+  .cta::before, .svc-track, .glow, .svc:hover i { animation: none; }
   .g3 { display: none; }
-  .cards { transform: rotate(-6deg) !important; transition: none; }
+  .svc-bg { transform: rotate(-6deg) !important; transition: none; }
 }
-
-.hero .tw-text::after {
-  background: #ffffff;
-}
-
 /* ==========================================================
    SLIDER (autoplay every 3s is done by script.js)
    ========================================================== */
@@ -1316,13 +1311,8 @@ section {
     margin: 0;
   }
 
-  /* Hero */
-  .hero {
-    min-height: auto;
-    padding: 230px 20px 60px 20px;
-  }
-
-.hero { min-height: 80vh; padding: 64px 20px; }
+/* Hero */
+  .hero { min-height: 80vh; padding: 250px 20px 60px; }   /* top space keeps it clear of the fixed header */
   .svc { width: 160px; height: 112px; font-size: 11px; letter-spacing: 1.5px; }
   .svc i { font-size: 34px; }
   .g1, .g2 { width: 340px; height: 340px; }
