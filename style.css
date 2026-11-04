@@ -558,6 +558,7 @@ nav a.active {
   font-size: 17px;
   line-height: 1.8;
   text-align: justify;
+  justify-content:normal;
 }
 .vm-card h3, .vm-card p {
   opacity: 0;
