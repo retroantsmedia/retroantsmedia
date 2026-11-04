@@ -557,7 +557,7 @@ nav a.active {
   color: #cfcfcf;
   font-size: 17px;
   line-height: 1.8;
-  text-align: left;
+  text-align: justify;
 }
 .vm-card h3, .vm-card p {
   opacity: 0;
