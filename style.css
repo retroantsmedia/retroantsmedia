@@ -1089,7 +1089,7 @@ section {
   --accent: #ed3038;
 
   position: relative;
-  padding: 72px 24px 0;
+  padding: 35px 24px 0;
   color: var(--ft-text);
   background:
     radial-gradient(520px 300px at 0% 100%, rgba(237, 48, 56, .18), transparent 70%),
@@ -1227,7 +1227,7 @@ section {
 /* Bottom bar */
 .ft-bottom {
   max-width: 1200px;
-  margin: 56px auto 0;
+  margin: 35px auto 0;
   padding: 22px 0 26px;
   border-top: 1px solid rgba(255, 255, 255, .1);
   display: flex; align-items: center; justify-content: space-between; gap: 16px;
