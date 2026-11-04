@@ -585,6 +585,18 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+        const aboutSection = document.querySelector('.about');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); // play only once
+      }
+    });
+  }, { threshold: 0.3 });
+
+  observer.observe(aboutSection);
 </script>
     </body>
 </html>
