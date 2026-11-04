@@ -182,7 +182,7 @@ nav a.active {
   background: radial-gradient(ellipse 70% 55% at 50% 48%,
     rgba(247, 247, 247, .95), rgba(247, 247, 247, .55) 70%, rgba(247, 247, 247, .7));
 }
-.hero-inner { position: relative; z-index: 2; max-width: 980px; }
+.hero-inner { position: relative; z-index: 2; max-width: 900px; }
 
 /* Headline: Arial, black, written letter by letter */
 .hero h1 {
