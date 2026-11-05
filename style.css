@@ -1292,7 +1292,10 @@ section {
 
   /* Text sizes */
   .hero p,
-  .about p,
+  .about p{
+     font-size:16px;
+     padding:0px 13px;
+  }
   .service-box p,
   .benefit-item p,
   .box p {
