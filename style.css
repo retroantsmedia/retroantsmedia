@@ -1228,7 +1228,7 @@ section {
   }
   /* menu button (only shown on phones) */
 .menu-btn {
-  display: none;
+  display: block;
   position: relative;
   width: 46px;
   height: 46px;
