@@ -1,129 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="images/retro_ants_media_favicon_32x32.png" type="image/png">
+<title>Shipping &amp; Delivery Policy | RETRO ANTS MEDIA</title>
+<meta name="description" content="Shipping &amp; Delivery Policy of RETRO ANTS MEDIA: delivery methods, digital and physical delivery timelines, shipping charges, delivery address, damaged products, delays and order tracking.">
+<!-- Google tag (gtag.js) -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R710ZMQJL5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-R710ZMQJL5');
+</script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  --accent: #ed3038;
+  --accent-deep: #c4161e;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+  background: #f7f7f7;
+  overflow-x: hidden;
+}
 
-# SHIPPING & DELIVERY POLICY
-**RETRO ANTS MEDIA**
+/* reading progress */
+.tc-progress { position: fixed; top: 0; left: 0; height: 4px; width: 0; z-index: 100; background: linear-gradient(90deg, #3aa0c8, var(--accent)); }
 
-**Last Updated:** 5 November 2026
+/* hero */
+.tc-hero { position: relative; overflow: hidden; text-align: center; padding: 84px 20px 50px; }
+.tc-hero::before, .tc-hero::after { content: ""; position: absolute; border-radius: 50%; pointer-events: none; filter: blur(30px); }
+.tc-hero::before { width: 460px; height: 460px; top: -180px; left: -120px; background: radial-gradient(circle, rgba(237, 48, 56, .26), transparent 70%); animation: tcFloat1 16s ease-in-out infinite alternate; }
+.tc-hero::after { width: 480px; height: 480px; top: -140px; right: -140px; background: radial-gradient(circle, rgba(58, 160, 200, .28), transparent 70%); animation: tcFloat2 19s ease-in-out infinite alternate; }
+@keyframes tcFloat1 { to { transform: translate(140px, 60px) scale(1.15); } }
+@keyframes tcFloat2 { to { transform: translate(-120px, 70px) scale(1.1); } }
+.tc-hero > * { position: relative; z-index: 1; opacity: 0; animation: tcUp .8s cubic-bezier(.2, .8, .2, 1) forwards; }
+.tc-eyebrow { display: block; margin-bottom: 14px; font-size: 14px; font-weight: 700; letter-spacing: 4px; color: var(--accent); animation-delay: .05s; }
+.tc-hero h1 { font-size: clamp(2.3rem, 6.4vw, 4rem); color: #111; line-height: 1.1; margin-bottom: 20px; animation-delay: .15s; }
+.tc-hero h1 .amp { color: var(--accent); }
+.tc-date {
+  display: inline-block; padding: 8px 20px; border-radius: 999px; font-size: 15px; font-weight: 700;
+  color: var(--accent-deep); background: #fff; border: 1.5px solid var(--accent); animation-delay: .3s;
+}
+.tc-intro { max-width: 720px; margin: 26px auto 0; font-size: 18px; line-height: 1.75; color: #444; animation-delay: .45s; }
+@keyframes tcUp { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: none; } }
 
-At RETRO ANTS MEDIA, we aim to deliver all completed photographs, videos, albums, customised frames and other products in a timely and professional manner. This Shipping & Delivery Policy explains our delivery methods, processing timelines, shipping arrangements and related conditions.
+.tc-wrap { max-width: 920px; margin: 0 auto; padding: 10px 20px 0; }
 
-## 1. Delivery Methods
+/* jump tiles */
 
-RETRO ANTS MEDIA provides digital and physical delivery options depending on the services and products ordered.
+/* toolbar */
 
-**Digital Delivery:**
+/* the page: one white sheet, sections separated by thin lines */
+#tc-list {
+  background: #fff; border: 1px solid #e6e6e6; border-radius: 18px;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, .07); padding: 14px 48px 24px;
+}
+.tc-item {
+  padding: 32px 0; border-bottom: 1px solid #ececec; scroll-margin-top: 20px;
+  opacity: 0; transform: translateY(22px); transition: opacity .6s ease, transform .6s ease;
+}
+.tc-item.show { opacity: 1; transform: none; }
+.tc-item:last-child { border-bottom: 0; }
+.tc-q { display: flex; align-items: center; gap: 20px; margin-bottom: 14px; color: #171717; }
+.tc-num { flex: none; min-width: 52px; font-size: 38px; font-weight: 800; line-height: 1; color: var(--accent); }
+.tc-q h2 { flex: 1; font-size: 22px; line-height: 1.35; color: #171717; }
+.tc-body { padding-left: 72px; }
+.tc-body p { font-size: 16px; line-height: 1.75; color: #333; margin: 0 0 12px; }
+.tc-body strong { color: #171717; }
+.tc-body p.sub { margin: 22px 0 8px; }
+.tc-body p.sub strong { color: var(--accent-deep); font-size: 17px; }
+.tc-body ul, .tc-body ol { list-style: none; margin: 8px 0 12px; }
+.tc-body li { position: relative; padding-left: 22px; margin-bottom: 10px; font-size: 16px; line-height: 1.7; color: #333; }
+.tc-body ul li::before { content: ""; position: absolute; left: 2px; top: .62em; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+.tc-body ol { counter-reset: n; }
+.tc-body ol li { counter-increment: n; padding-left: 42px; }
+.tc-body ol li::before {
+  content: counter(n); position: absolute; left: 0; top: .05em; width: 27px; height: 27px; border-radius: 50%;
+  display: grid; place-items: center; background: #fdecec; color: var(--accent-deep); font-size: 13px; font-weight: 700;
+}
+.tc-body a { color: var(--accent-deep); font-weight: 700; text-decoration: none; border-bottom: 1px solid rgba(196, 22, 30, .35); transition: border-color .25s ease; }
+.tc-body a:hover { border-color: var(--accent-deep); }
 
-- Final photographs and edited images.
-- Edited videos and reels.
-- Photo and video editing projects, where agreed.
-- Digital album designs.
-- Other completed digital deliverables.
+/* end */
+.tc-end { text-align: center; padding: 40px 20px 60px; }
+.tc-back {
+  display: inline-block; padding: 14px 32px; border-radius: 999px; text-decoration: none; color: #fff;
+  font: 600 16px Arial, Helvetica, sans-serif; background: linear-gradient(135deg, var(--accent), var(--accent-deep));
+  box-shadow: 0 12px 28px rgba(237, 48, 56, .4); transition: transform .3s cubic-bezier(.3, 1.6, .5, 1), box-shadow .3s ease;
+}
+.tc-back:hover, .tc-back:focus-visible { transform: translateY(-3px) scale(1.03); box-shadow: 0 18px 36px rgba(237, 48, 56, .55); }
+.tc-back:focus-visible { outline: 3px solid #171717; outline-offset: 3px; }
+.tc-copy { margin-top: 22px; font-size: 15px; color: #666; }
 
-Digital files may be delivered through:
-- Google Drive or other cloud storage links.
-- Email.
-- WhatsApp, where suitable.
-- Downloadable links.
-- Pen drives or other agreed digital storage devices.
+@media (max-width: 768px) {
+  .tc-hero { padding: 60px 16px 36px; }
+  .tc-intro { font-size: 16px; }
+  #tc-list { padding: 6px 22px 14px; border-radius: 14px; }
+  .tc-item { padding: 26px 0; }
+  .tc-q { gap: 12px; }
+  .tc-num { min-width: 38px; font-size: 26px; }
+  .tc-q h2 { font-size: 18px; }
+  .tc-body { padding-left: 0; }
+  .tc-body p, .tc-body li { font-size: 15px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .tc-hero > *, .tc-item { opacity: 1; transform: none; animation: none; transition: none; }
+  .tc-hero::before, .tc-hero::after { animation: none; }
+}
+@media print {
+  #tc-list { border: 0; box-shadow: none; padding: 0; }
+  .tc-item { opacity: 1 !important; transform: none !important; break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+<div class="tc-progress" id="tc-progress"></div>
 
-**Physical Delivery:**
+<header class="tc-hero">
+  <span class="tc-eyebrow">RETRO ANTS MEDIA</span>
+  <h1>Shipping <span class="amp">&amp;</span> Delivery Policy</h1>
+  <p class="tc-date">Last Updated: 5 November 2026</p>
+  <p class="tc-intro">At RETRO ANTS MEDIA, we aim to deliver all completed photographs, videos, albums, customised frames and other products in a timely and professional manner. This Shipping &amp; Delivery Policy explains our delivery methods, processing timelines, shipping arrangements and related conditions.</p>
+</header>
 
-- Printed photo albums.
-- Customised photo frames.
-- Printed photographs.
-- Pen drives containing photographs and videos.
-- Other customised printing products.
+<div class="tc-wrap">
 
-Physical products may be delivered through courier services, postal services, local delivery or direct collection, depending on the customer's location and mutual agreement.
+  <main id="tc-list">
+    <section class="tc-item" id="s1">
+      <div class="tc-q">
+        <span class="tc-num" aria-hidden="true">01</span>
+        <h2>Delivery Methods</h2>
+      </div>
+      <div class="tc-body"><p>RETRO ANTS MEDIA provides digital and physical delivery options depending on the services and products ordered.</p>
+      <p class="sub"><strong>Digital Delivery:</strong></p>
+      <ul>
+        <li>Final photographs and edited images.</li>
+        <li>Edited videos and reels.</li>
+        <li>Photo and video editing projects, where agreed.</li>
+        <li>Digital album designs.</li>
+        <li>Other completed digital deliverables.</li>
+      </ul>
+      <p>Digital files may be delivered through:</p>
+      <ul>
+        <li>Google Drive or other cloud storage links.</li>
+        <li>Email.</li>
+        <li>WhatsApp, where suitable.</li>
+        <li>Downloadable links.</li>
+        <li>Pen drives or other agreed digital storage devices.</li>
+      </ul>
+      <p class="sub"><strong>Physical Delivery:</strong></p>
+      <ul>
+        <li>Printed photo albums.</li>
+        <li>Customised photo frames.</li>
+        <li>Printed photographs.</li>
+        <li>Pen drives containing photographs and videos.</li>
+        <li>Other customised printing products.</li>
+      </ul>
+      <p>Physical products may be delivered through courier services, postal services, local delivery or direct collection, depending on the customer's location and mutual agreement.</p></div>
+    </section>
 
-## 2. Digital Delivery Timelines
+    <section class="tc-item" id="s2">
+      <div class="tc-q">
+        <span class="tc-num" aria-hidden="true">02</span>
+        <h2>Digital Delivery Timelines</h2>
+      </div>
+      <div class="tc-body"><ol>
+        <li>Digital deliverables will be provided according to the timeline agreed upon during booking or order confirmation.</li>
+        <li>Delivery timelines may vary depending on the project size, number of photographs, video duration, editing requirements and customer feedback.</li>
+        <li>Album designs and other digital proofs will be shared for review where applicable.</li>
+        <li>Customers must provide any required feedback, approvals or corrections in a timely manner to avoid delivery delays.</li>
+        <li>Once the final deliverables are ready, customers will be notified through their registered contact details.</li>
+        <li>Customers are responsible for downloading and maintaining backup copies of their delivered digital files.</li>
+      </ol></div>
+    </section>
 
-1. Digital deliverables will be provided according to the timeline agreed upon during booking or order confirmation.
-2. Delivery timelines may vary depending on the project size, number of photographs, video duration, editing requirements and customer feedback.
-3. Album designs and other digital proofs will be shared for review where applicable.
-4. Customers must provide any required feedback, approvals or corrections in a timely manner to avoid delivery delays.
-5. Once the final deliverables are ready, customers will be notified through their registered contact details.
-6. Customers are responsible for downloading and maintaining backup copies of their delivered digital files.
+    <section class="tc-item" id="s3">
+      <div class="tc-q">
+        <span class="tc-num" aria-hidden="true">03</span>
+        <h2>Album Printing and Customised Product Delivery</h2>
+      </div>
+      <div class="tc-body"><ol>
+        <li>Album printing, customised frames and other physical products will be processed according to the specifications and requirements agreed upon with the customer.</li>
+        <li>Production will begin after the necessary design approvals and payment requirements have been completed.</li>
+        <li>Printing and manufacturing timelines depend on the product type, quantity, materials and production requirements.</li>
+        <li>Customers will be informed when their products are ready for dispatch or collection.</li>
+        <li>Any additional changes requested after production begins may involve additional charges and delivery time.</li>
+        <li>We make reasonable efforts to ensure that all printed products meet the agreed quality and specifications.</li>
+      </ol></div>
+    </section>
 
-## 3. Album Printing and Customised Product Delivery
+    <section class="tc-item" id="s4">
+      <div class="tc-q">
+        <span class="tc-num" aria-hidden="true">04</span>
+        <h2>Shipping and Delivery Charges</h2>
+      </div>
+      <div class="tc-body"><ol>
+        <li>Shipping and courier charges will be communicated to customers before order confirmation.</li>
+        <li>Delivery charges may vary depending on the customer's location, product weight, dimensions and courier service.</li>
+        <li>Local delivery, interstate shipping and other transportation arrangements may have different charges.</li>
+        <li>Customers may also choose to collect their completed products directly, subject to prior arrangement.</li>
+        <li>Any additional shipping charges arising from a customer-requested change of delivery address may be payable by the customer.</li>
+      </ol></div>
+    </section>
 
-1. Album printing, customised frames and other physical products will be processed according to the specifications and requirements agreed upon with the customer.
-2. Production will begin after the necessary design approvals and payment requirements have been completed.
-3. Printing and manufacturing timelines depend on the product type, quantity, materials and production requirements.
-4. Customers will be informed when their products are ready for dispatch or collection.
-5. Any additional changes requested after production begins may involve additional charges and delivery time.
-6. We make reasonable efforts to ensure that all printed products meet the agreed quality and specifications.
+    <section class="tc-item" id="s5">
+      <div class="tc-q">
+        <span class="tc-num" aria-hidden="true">05</span>
+        <h2>Delivery Address and Customer Information</h2>
+      </div>
+      <div class="tc-body"><ol>
+        <li>Customers must provide accurate and complete delivery information, including their name, phone number, address, city, state and PIN code.</li>
+        <li>RETRO ANTS MEDIA will use the delivery information provided by the customer to arrange shipping and delivery.</li>
+        <li>Customers must inform us of any address changes before the order is dispatched.</li>
+        <li>RETRO ANTS MEDIA will not be responsible for delivery issues caused by incorrect or incomplete address details supplied by the customer.</li>
+      </ol></div>
+    </section>
 
-## 4. Shipping and Delivery Charges
+    <section class="tc-item" id="s6">
+      <div class="tc-q">
+        <span class="tc-num" aria-hidden="true">06</span>
+        <h2>Shipping and Courier Responsibility</h2>
+      </div>
+      <div class="tc-body"><ol>
+        <li>Physical products will be packed appropriately to minimise the risk of damage during transportation.</li>
+        <li>Once an order has been dispatched, customers will be provided with available tracking information.</li>
+        <li>Delivery timelines depend on the courier or postal service and the destination.</li>
+        <li>RETRO ANTS MEDIA will make reasonable efforts to coordinate with the courier service in case of shipping delays or delivery issues.</li>
+        <li>Customers are requested to inspect their packages upon receiving them and inform us promptly if any damage, missing items or incorrect products are identified.</li>
+      </ol></div>
+    </section>
 
-1. Shipping and courier charges will be communicated to customers before order confirmation.
-2. Delivery charges may vary depending on the customer's location, product weight, dimensions and courier service.
-3. Local delivery, interstate shipping and other transportation arrangements may have different charges.
-4. Customers may also choose to collect their completed products directly, subject to prior arrangement.
-5. Any additional shipping charges arising from a customer-requested change of delivery address may be payable by the customer.
+    <section class="tc-item" id="s7">
+      <div class="tc-q">
+        <span class="tc-num" aria-hidden="true">07</span>
+        <h2>Damaged, Missing or Incorrect Products</h2>
+      </div>
+      <div class="tc-body"><ol>
+        <li>If a customer receives a damaged, defective or incorrect product, they should contact RETRO ANTS MEDIA as soon as possible.</li>
+        <li>Customers should provide photographs or videos showing the product condition and packaging as supporting evidence.</li>
+        <li>We will review the complaint and coordinate an appropriate solution, which may include correction, replacement or refund, depending on the circumstances.</li>
+        <li>If an error occurs during printing or production due to our mistake, we will take reasonable steps to correct the issue without additional charges to the customer.</li>
+        <li>Issues caused by incorrect specifications or approvals provided by the customer will be reviewed separately.</li>
+      </ol></div>
+    </section>
 
-## 5. Delivery Address and Customer Information
+    <section class="tc-item" id="s8">
+      <div class="tc-q">
+        <span class="tc-num" aria-hidden="true">08</span>
+        <h2>Delivery Delays</h2>
+      </div>
+      <div class="tc-body"><p>Although we aim to deliver orders within the agreed timelines, delays may occur due to:</p>
+      <ul>
+        <li>Courier or postal service delays.</li>
+        <li>Transportation disruptions.</li>
+        <li>Production or printing delays.</li>
+        <li>Unforeseen technical or operational issues.</li>
+        <li>Other circumstances beyond our reasonable control.</li>
+      </ul>
+      <p>We will communicate relevant updates to customers whenever possible.</p></div>
+    </section>
 
-1. Customers must provide accurate and complete delivery information, including their name, phone number, address, city, state and PIN code.
-2. RETRO ANTS MEDIA will use the delivery information provided by the customer to arrange shipping and delivery.
-3. Customers must inform us of any address changes before the order is dispatched.
-4. RETRO ANTS MEDIA will not be responsible for delivery issues caused by incorrect or incomplete address details supplied by the customer.
+    <section class="tc-item" id="s9">
+      <div class="tc-q">
+        <span class="tc-num" aria-hidden="true">09</span>
+        <h2>Digital File Storage and Availability</h2>
+      </div>
+      <div class="tc-body"><ol>
+        <li>RETRO ANTS MEDIA will retain raw photographs, unedited videos and other original files until the agreed final deliverables have been completed and delivered.</li>
+        <li>After final delivery, customers will be informed before raw files and working materials are deleted.</li>
+        <li>Customers who wish to receive raw copies must request them before deletion, subject to the agreed service package.</li>
+        <li>Extended storage of raw photographs, unedited videos and other original files will be available at an additional one-time charge.</li>
+        <li>RETRO ANTS MEDIA provides lifetime storage of final delivered photographs, videos and other completed digital deliverables without additional storage charges, subject to the continued availability of our storage facilities and services.</li>
+        <li>Customers are encouraged to download and maintain their own backup copies of all delivered files.</li>
+      </ol></div>
+    </section>
 
-## 6. Shipping and Courier Responsibility
+    <section class="tc-item" id="s10">
+      <div class="tc-q">
+        <span class="tc-num" aria-hidden="true">10</span>
+        <h2>Order Tracking and Delivery Updates</h2>
+      </div>
+      <div class="tc-body"><p>Customers can contact RETRO ANTS MEDIA through phone, WhatsApp or email to enquire about the status of their orders.</p>
+      <p>Where courier tracking is available, tracking details will be shared with the customer after dispatch.</p></div>
+    </section>
 
-1. Physical products will be packed appropriately to minimise the risk of damage during transportation.
-2. Once an order has been dispatched, customers will be provided with available tracking information.
-3. Delivery timelines depend on the courier or postal service and the destination.
-4. RETRO ANTS MEDIA will make reasonable efforts to coordinate with the courier service in case of shipping delays or delivery issues.
-5. Customers are requested to inspect their packages upon receiving them and inform us promptly if any damage, missing items or incorrect products are identified.
+    <section class="tc-item" id="s11">
+      <div class="tc-q">
+        <span class="tc-num" aria-hidden="true">11</span>
+        <h2>Changes to This Policy</h2>
+      </div>
+      <div class="tc-body"><p>RETRO ANTS MEDIA reserves the right to update or modify this Shipping &amp; Delivery Policy when necessary.</p>
+      <p>Any changes will be published on this website along with the revised date. Customers are encouraged to review this page periodically.</p></div>
+    </section>
 
-## 7. Damaged, Missing or Incorrect Products
+    <section class="tc-item" id="s12">
+      <div class="tc-q">
+        <span class="tc-num" aria-hidden="true">12</span>
+        <h2>Contact Information</h2>
+      </div>
+      <div class="tc-body">      <p>For questions or assistance regarding shipping, delivery, order tracking or physical products, please contact us.</p>
+      <p><strong>RETRO ANTS MEDIA</strong></p>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:contact@retroantsmedia.com">contact@retroantsmedia.com</a></li>
+        <li><strong>Phone / WhatsApp:</strong> <a href="tel:+919741467809">+91 9741467809</a></li>
+        <!-- Add your website here, for example:
+        <li><strong>Website:</strong> <a href="https://www.your-website.com">www.your-website.com</a></li> -->
+        <li><strong>Business Location:</strong> Bengaluru, Karnataka, India</li>
+      </ul></div>
+    </section>
+  </main>
+</div>
 
-1. If a customer receives a damaged, defective or incorrect product, they should contact RETRO ANTS MEDIA as soon as possible.
-2. Customers should provide photographs or videos showing the product condition and packaging as supporting evidence.
-3. We will review the complaint and coordinate an appropriate solution, which may include correction, replacement or refund, depending on the circumstances.
-4. If an error occurs during printing or production due to our mistake, we will take reasonable steps to correct the issue without additional charges to the customer.
-5. Issues caused by incorrect specifications or approvals provided by the customer will be reviewed separately.
+<div class="tc-end">
+  <a href="index.html" class="tc-back">Back to Home</a>
+  <p class="tc-copy">Copyright © 2026 RETRO ANTS MEDIA. All Rights Reserved.</p>
+</div>
 
-## 8. Delivery Delays
+<script>
+(function () {
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.tc-item'));
+  var bar = document.getElementById('tc-progress');
 
-Although we aim to deliver orders within the agreed timelines, delays may occur due to:
+  /* cards fade in as they scroll into view */
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('show'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.08 });
+    cards.forEach(function (el) { io.observe(el); });
+  } else {
+    cards.forEach(function (el) { el.classList.add('show'); });
+  }
 
-- Courier or postal service delays.
-- Transportation disruptions.
-- Production or printing delays.
-- Unforeseen technical or operational issues.
-- Other circumstances beyond our reasonable control.
-
-We will communicate relevant updates to customers whenever possible.
-
-## 9. Digital File Storage and Availability
-
-1. RETRO ANTS MEDIA will retain raw photographs, unedited videos and other original files until the agreed final deliverables have been completed and delivered.
-2. After final delivery, customers will be informed before raw files and working materials are deleted.
-3. Customers who wish to receive raw copies must request them before deletion, subject to the agreed service package.
-4. Extended storage of raw photographs, unedited videos and other original files will be available at an additional one-time charge.
-5. RETRO ANTS MEDIA provides lifetime storage of final delivered photographs, videos and other completed digital deliverables without additional storage charges, subject to the continued availability of our storage facilities and services.
-6. Customers are encouraged to download and maintain their own backup copies of all delivered files.
-
-## 10. Order Tracking and Delivery Updates
-
-Customers can contact RETRO ANTS MEDIA through phone, WhatsApp or email to enquire about the status of their orders.
-
-Where courier tracking is available, tracking details will be shared with the customer after dispatch.
-
-## 11. Changes to This Policy
-
-RETRO ANTS MEDIA reserves the right to update or modify this Shipping & Delivery Policy when necessary.
-
-Any changes will be published on this website along with the revised date. Customers are encouraged to review this page periodically.
-
-## 12. Contact Information
-
-For questions or assistance regarding shipping, delivery, order tracking or physical products, please contact us.
-
-**RETRO ANTS MEDIA**
-
-- **Email:** [Insert your business email]
-- **Phone / WhatsApp:** [Insert your business contact number]
-- **Website:** [Insert your website URL]
-- **Business Location:** Bengaluru, Karnataka, India
+  /* reading progress bar */
+  function progress() {
+    var h = document.documentElement, max = h.scrollHeight - h.clientHeight;
+    bar.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
+  }
+  window.addEventListener('scroll', progress, { passive: true });
+  progress();
+})();
+</script>
+</body>
+</html>
