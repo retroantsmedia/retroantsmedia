@@ -1,105 +1,317 @@
-# CANCELLATION & REFUND POLICY
-**RETRO ANTS MEDIA**
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="images/retro_ants_media_favicon_32x32.png" type="image/png">
+<title>Cancellation &amp; Refund Policy | RETRO ANTS MEDIA</title>
+<meta name="description" content="Cancellation &amp; Refund Policy of RETRO ANTS MEDIA: booking cancellation, rescheduling, refunds, editing services, albums and frames, advance payments and how to request a refund.">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R710ZMQJL5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-R710ZMQJL5');
+</script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  --accent: #ed3038;
+  --accent-deep: #c4161e;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+  background: #f7f7f7;
+  overflow-x: hidden;
+}
 
-**Last Updated:** 5 November 2026
+/* reading progress */
+.tc-progress { position: fixed; top: 0; left: 0; height: 4px; width: 0; z-index: 100; background: linear-gradient(90deg, #3aa0c8, var(--accent)); }
 
-At RETRO ANTS MEDIA, we value our customers and strive to provide professional services. This Cancellation & Refund Policy explains the terms applicable when customers cancel bookings, reschedule assignments, request refunds or discontinue orders.
+/* hero */
+.tc-hero { position: relative; overflow: hidden; text-align: center; padding: 84px 20px 50px; }
+.tc-hero::before, .tc-hero::after { content: ""; position: absolute; border-radius: 50%; pointer-events: none; filter: blur(30px); }
+.tc-hero::before { width: 460px; height: 460px; top: -180px; left: -120px; background: radial-gradient(circle, rgba(237, 48, 56, .26), transparent 70%); animation: tcFloat1 16s ease-in-out infinite alternate; }
+.tc-hero::after { width: 480px; height: 480px; top: -140px; right: -140px; background: radial-gradient(circle, rgba(58, 160, 200, .28), transparent 70%); animation: tcFloat2 19s ease-in-out infinite alternate; }
+@keyframes tcFloat1 { to { transform: translate(140px, 60px) scale(1.15); } }
+@keyframes tcFloat2 { to { transform: translate(-120px, 70px) scale(1.1); } }
+.tc-hero > * { position: relative; z-index: 1; opacity: 0; animation: tcUp .8s cubic-bezier(.2, .8, .2, 1) forwards; }
+.tc-eyebrow { display: block; margin-bottom: 14px; font-size: 14px; font-weight: 700; letter-spacing: 4px; color: var(--accent); animation-delay: .05s; }
+.tc-hero h1 { font-size: clamp(2.3rem, 6.4vw, 4rem); color: #111; line-height: 1.1; margin-bottom: 20px; animation-delay: .15s; }
+.tc-hero h1 .amp { color: var(--accent); }
+.tc-date {
+  display: inline-block; padding: 8px 20px; border-radius: 999px; font-size: 15px; font-weight: 700;
+  color: var(--accent-deep); background: #fff; border: 1.5px solid var(--accent); animation-delay: .3s;
+}
+.tc-intro { max-width: 720px; margin: 26px auto 0; font-size: 18px; line-height: 1.75; color: #444; animation-delay: .45s; }
+.tc-intro + .tc-intro { margin-top: 14px; animation-delay: .6s; }
+@keyframes tcUp { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: none; } }
 
-By booking our services or placing an order, customers agree to the following policy.
+.tc-wrap { max-width: 920px; margin: 0 auto; padding: 10px 20px 0; }
 
-## 1. Booking Cancellation by Customers
+/* jump tiles */
 
-1. Customers who wish to cancel a confirmed booking must inform RETRO ANTS MEDIA through email, phone, WhatsApp or other written communication.
-2. If a customer cancels a booking due to personal reasons, unavoidable circumstances or other issues, RETRO ANTS MEDIA will discuss the situation with the customer and review whether a refund is applicable.
-3. If the cancellation occurs before any service or work has started, the customer will generally be eligible for a full refund of the amount paid.
-4. If the service or work has already started, the refund will be considered based on the work completed and expenses already incurred.
-5. Cancellation requests made close to the event date may involve additional charges depending on the arrangements and expenses already incurred.
+/* toolbar */
 
-## 2. Rescheduling of Bookings
+/* the page: one white sheet, sections separated by thin lines */
+#tc-list {
+  background: #fff; border: 1px solid #e6e6e6; border-radius: 18px;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, .07); padding: 14px 48px 24px;
+}
+.tc-item {
+  padding: 32px 0; border-bottom: 1px solid #ececec; scroll-margin-top: 20px;
+  opacity: 0; transform: translateY(22px); transition: opacity .6s ease, transform .6s ease;
+}
+.tc-item.show { opacity: 1; transform: none; }
+.tc-item:last-child { border-bottom: 0; }
+.tc-q { display: flex; align-items: center; gap: 20px; margin-bottom: 14px; color: #171717; }
+.tc-num { flex: none; min-width: 52px; font-size: 38px; font-weight: 800; line-height: 1; color: var(--accent); }
+.tc-q h2 { flex: 1; font-size: 22px; line-height: 1.35; color: #171717; }
+.tc-body { padding-left: 72px; }
+.tc-body p { font-size: 16px; line-height: 1.75; color: #333; margin: 0 0 12px; }
+.tc-body strong { color: #171717; }
+.tc-body ul, .tc-body ol { list-style: none; margin: 8px 0 12px; }
+.tc-body li { position: relative; padding-left: 22px; margin-bottom: 10px; font-size: 16px; line-height: 1.7; color: #333; }
+.tc-body ul li::before { content: ""; position: absolute; left: 2px; top: .62em; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+.tc-body ol { counter-reset: n; }
+.tc-body ol li { counter-increment: n; padding-left: 42px; }
+.tc-body ol li::before {
+  content: counter(n); position: absolute; left: 0; top: .05em; width: 27px; height: 27px; border-radius: 50%;
+  display: grid; place-items: center; background: #fdecec; color: var(--accent-deep); font-size: 13px; font-weight: 700;
+}
+.tc-body a { color: var(--accent-deep); font-weight: 700; text-decoration: none; border-bottom: 1px solid rgba(196, 22, 30, .35); transition: border-color .25s ease; }
+.tc-body a:hover { border-color: var(--accent-deep); }
 
-1. Customers who wish to change their event date or booking schedule must inform RETRO ANTS MEDIA as early as possible.
-2. Rescheduling requests are subject to the availability of our photography and videography team.
-3. If the requested date is available, the booking may be transferred to the new date based on mutual agreement.
-4. If additional travel, accommodation, equipment or other arrangements are required, additional charges may apply.
-5. If the requested date is unavailable, both parties may discuss alternative dates or cancellation arrangements.
+/* end */
+.tc-end { text-align: center; padding: 40px 20px 60px; }
+.tc-back {
+  display: inline-block; padding: 14px 32px; border-radius: 999px; text-decoration: none; color: #fff;
+  font: 600 16px Arial, Helvetica, sans-serif; background: linear-gradient(135deg, var(--accent), var(--accent-deep));
+  box-shadow: 0 12px 28px rgba(237, 48, 56, .4); transition: transform .3s cubic-bezier(.3, 1.6, .5, 1), box-shadow .3s ease;
+}
+.tc-back:hover, .tc-back:focus-visible { transform: translateY(-3px) scale(1.03); box-shadow: 0 18px 36px rgba(237, 48, 56, .55); }
+.tc-back:focus-visible { outline: 3px solid #171717; outline-offset: 3px; }
+.tc-copy { margin-top: 22px; font-size: 15px; color: #666; }
 
-## 3. Cancellation by RETRO ANTS MEDIA
+@media (max-width: 768px) {
+  .tc-hero { padding: 60px 16px 36px; }
+  .tc-intro { font-size: 16px; }
+  #tc-list { padding: 6px 22px 14px; border-radius: 14px; }
+  .tc-item { padding: 26px 0; }
+  .tc-q { gap: 12px; }
+  .tc-num { min-width: 38px; font-size: 26px; }
+  .tc-q h2 { font-size: 18px; }
+  .tc-body { padding-left: 0; }
+  .tc-body p, .tc-body li { font-size: 15px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .tc-hero > *, .tc-item { opacity: 1; transform: none; animation: none; transition: none; }
+  .tc-hero::before, .tc-hero::after { animation: none; }
+}
+@media print {
+  #tc-list { border: 0; box-shadow: none; padding: 0; }
+  .tc-item { opacity: 1 !important; transform: none !important; break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+<div class="tc-progress" id="tc-progress"></div>
 
-1. In exceptional circumstances where RETRO ANTS MEDIA is unable to fulfil a confirmed assignment, we will inform the customer as early as possible.
-2. We will make reasonable efforts to arrange an alternative team or mutually acceptable rescheduled date.
-3. If the assignment cannot be completed and no alternative arrangement is accepted, the customer will receive a full refund of the amount paid for the services that were not provided.
-4. The refund details will be communicated to the customer, and the approved refund will be processed within 3 working days of confirmation.
-5. Refunds will generally be made through the original payment method wherever possible.
+<header class="tc-hero">
+  <span class="tc-eyebrow">RETRO ANTS MEDIA</span>
+  <h1>Cancellation <span class="amp">&amp;</span> Refund Policy</h1>
+  <p class="tc-date">Last Updated: 5 November 2026</p>
+  <p class="tc-intro">At RETRO ANTS MEDIA, we value our customers and strive to provide professional services. This Cancellation &amp; Refund Policy explains the terms applicable when customers cancel bookings, reschedule assignments, request refunds or discontinue orders.</p>
+  <p class="tc-intro">By booking our services or placing an order, customers agree to the following policy.</p>
+</header>
 
-## 4. Photo and Video Editing Services
+<div class="tc-wrap">
 
-1. If a customer requests cancellation before editing work has started, a full refund of the amount paid will generally be provided.
-2. Once editing work has started, cancellation requests will be evaluated based on the work completed.
-3. Charges for completed editing work and expenses already incurred may be deducted from the refundable amount.
-4. If the editing work has been completed and delivered according to the agreed requirements, payment for that completed service will generally not be refundable.
-5. Additional revisions or changes outside the agreed scope may involve additional charges.
+  <main id="tc-list">
+    <section class="tc-item" id="s1">
+      <div class="tc-q">
+        <span class="tc-num" aria-hidden="true">01</span>
+        <h2>Booking Cancellation by Customers</h2>
+      </div>
+      <div class="tc-body"><ol>
+        <li>Customers who wish to cancel a confirmed booking must inform RETRO ANTS MEDIA through email, phone, WhatsApp or other written communication.</li>
+        <li>If a customer cancels a booking due to personal reasons, unavoidable circumstances or other issues, RETRO ANTS MEDIA will discuss the situation with the customer and review whether a refund is applicable.</li>
+        <li>If the cancellation occurs before any service or work has started, the customer will generally be eligible for a full refund of the amount paid.</li>
+        <li>If the service or work has already started, the refund will be considered based on the work completed and expenses already incurred.</li>
+        <li>Cancellation requests made close to the event date may involve additional charges depending on the arrangements and expenses already incurred.</li>
+      </ol></div>
+    </section>
 
-## 5. Album Designing, Printing and Customised Frames
+    <section class="tc-item" id="s2">
+      <div class="tc-q">
+        <span class="tc-num" aria-hidden="true">02</span>
+        <h2>Rescheduling of Bookings</h2>
+      </div>
+      <div class="tc-body"><ol>
+        <li>Customers who wish to change their event date or booking schedule must inform RETRO ANTS MEDIA as early as possible.</li>
+        <li>Rescheduling requests are subject to the availability of our photography and videography team.</li>
+        <li>If the requested date is available, the booking may be transferred to the new date based on mutual agreement.</li>
+        <li>If additional travel, accommodation, equipment or other arrangements are required, additional charges may apply.</li>
+        <li>If the requested date is unavailable, both parties may discuss alternative dates or cancellation arrangements.</li>
+      </ol></div>
+    </section>
 
-1. Once album printing, frame production or customised product manufacturing has started, cancellation may not be possible without applicable charges.
-2. Costs already incurred for designing, printing, materials, production and customisation may be deducted from any eligible refund.
-3. If a product is defective, damaged or incorrectly supplied due to an error on our part, customers should contact us with the relevant details and supporting photographs.
-4. We will review the issue and arrange an appropriate solution, such as correction, replacement or refund, as applicable.
+    <section class="tc-item" id="s3">
+      <div class="tc-q">
+        <span class="tc-num" aria-hidden="true">03</span>
+        <h2>Cancellation by RETRO ANTS MEDIA</h2>
+      </div>
+      <div class="tc-body"><ol>
+        <li>In exceptional circumstances where RETRO ANTS MEDIA is unable to fulfil a confirmed assignment, we will inform the customer as early as possible.</li>
+        <li>We will make reasonable efforts to arrange an alternative team or mutually acceptable rescheduled date.</li>
+        <li>If the assignment cannot be completed and no alternative arrangement is accepted, the customer will receive a full refund of the amount paid for the services that were not provided.</li>
+        <li>The refund details will be communicated to the customer, and the approved refund will be processed within 3 working days of confirmation.</li>
+        <li>Refunds will generally be made through the original payment method wherever possible.</li>
+      </ol></div>
+    </section>
 
-## 6. Advance Payments and Refunds
+    <section class="tc-item" id="s4">
+      <div class="tc-q">
+        <span class="tc-num" aria-hidden="true">04</span>
+        <h2>Photo and Video Editing Services</h2>
+      </div>
+      <div class="tc-body"><ol>
+        <li>If a customer requests cancellation before editing work has started, a full refund of the amount paid will generally be provided.</li>
+        <li>Once editing work has started, cancellation requests will be evaluated based on the work completed.</li>
+        <li>Charges for completed editing work and expenses already incurred may be deducted from the refundable amount.</li>
+        <li>If the editing work has been completed and delivered according to the agreed requirements, payment for that completed service will generally not be refundable.</li>
+        <li>Additional revisions or changes outside the agreed scope may involve additional charges.</li>
+      </ol></div>
+    </section>
 
-1. Advance payments are collected to confirm bookings, reserve dates, allocate resources and make necessary arrangements.
-2. If a booking is cancelled before the agreed service or work has started, the customer will generally receive a full refund of the amount paid.
-3. If work or services have already started, the applicable refund will be determined based on the work completed and expenses incurred.
-4. Duplicate payments or excess payments received by mistake will be reviewed and refunded where applicable.
-5. Approved refunds will generally be processed within 3 working days of confirmation. Actual credit to the customer's account may depend on the payment provider or bank.
+    <section class="tc-item" id="s5">
+      <div class="tc-q">
+        <span class="tc-num" aria-hidden="true">05</span>
+        <h2>Album Designing, Printing and Customised Frames</h2>
+      </div>
+      <div class="tc-body"><ol>
+        <li>Once album printing, frame production or customised product manufacturing has started, cancellation may not be possible without applicable charges.</li>
+        <li>Costs already incurred for designing, printing, materials, production and customisation may be deducted from any eligible refund.</li>
+        <li>If a product is defective, damaged or incorrectly supplied due to an error on our part, customers should contact us with the relevant details and supporting photographs.</li>
+        <li>We will review the issue and arrange an appropriate solution, such as correction, replacement or refund, as applicable.</li>
+      </ol></div>
+    </section>
 
-## 7. Non-Refundable Expenses
+    <section class="tc-item" id="s6">
+      <div class="tc-q">
+        <span class="tc-num" aria-hidden="true">06</span>
+        <h2>Advance Payments and Refunds</h2>
+      </div>
+      <div class="tc-body"><ol>
+        <li>Advance payments are collected to confirm bookings, reserve dates, allocate resources and make necessary arrangements.</li>
+        <li>If a booking is cancelled before the agreed service or work has started, the customer will generally receive a full refund of the amount paid.</li>
+        <li>If work or services have already started, the applicable refund will be determined based on the work completed and expenses incurred.</li>
+        <li>Duplicate payments or excess payments received by mistake will be reviewed and refunded where applicable.</li>
+        <li>Approved refunds will generally be processed within 3 working days of confirmation. Actual credit to the customer's account may depend on the payment provider or bank.</li>
+      </ol></div>
+    </section>
 
-Certain expenses may not be recoverable once incurred. These may include:
+    <section class="tc-item" id="s7">
+      <div class="tc-q">
+        <span class="tc-num" aria-hidden="true">07</span>
+        <h2>Non-Refundable Expenses</h2>
+      </div>
+      <div class="tc-body"><p>Certain expenses may not be recoverable once incurred. These may include:</p>
+      <ul>
+        <li>Travel and accommodation arrangements.</li>
+        <li>Equipment rentals and reservations.</li>
+        <li>Third-party vendor payments.</li>
+        <li>Album printing and manufacturing expenses.</li>
+        <li>Customised frame production costs.</li>
+        <li>Other project-related expenses already incurred.</li>
+      </ul>
+      <p>Such expenses may be deducted from the eligible refund amount, subject to the agreed terms and applicable laws.</p></div>
+    </section>
 
-- Travel and accommodation arrangements.
-- Equipment rentals and reservations.
-- Third-party vendor payments.
-- Album printing and manufacturing expenses.
-- Customised frame production costs.
-- Other project-related expenses already incurred.
+    <section class="tc-item" id="s8">
+      <div class="tc-q">
+        <span class="tc-num" aria-hidden="true">08</span>
+        <h2>How to Request a Cancellation or Refund</h2>
+      </div>
+      <div class="tc-body"><p>Customers can submit cancellation, rescheduling or refund requests through the following communication channels:</p>
+      <ul>
+        <li>Email.</li>
+        <li>Phone call.</li>
+        <li>WhatsApp.</li>
+        <li>Written communication.</li>
+      </ul>
+      <p>Please include the following details when submitting a request:</p>
+      <ul>
+        <li>Customer name.</li>
+        <li>Booking or order reference number, if available.</li>
+        <li>Date of booking or order.</li>
+        <li>Service or product details.</li>
+        <li>Reason for cancellation or refund.</li>
+        <li>Payment transaction reference, where necessary.</li>
+      </ul>
+      <p>Our team will review the request and communicate the applicable terms and next steps.</p></div>
+    </section>
 
-Such expenses may be deducted from the eligible refund amount, subject to the agreed terms and applicable laws.
+    <section class="tc-item" id="s9">
+      <div class="tc-q">
+        <span class="tc-num" aria-hidden="true">09</span>
+        <h2>Changes to This Policy</h2>
+      </div>
+      <div class="tc-body"><p>RETRO ANTS MEDIA reserves the right to update or modify this Cancellation &amp; Refund Policy when necessary.</p>
+      <p>Any changes will be published on this website along with the revised date. Customers are encouraged to review this page periodically.</p></div>
+    </section>
 
-## 8. How to Request a Cancellation or Refund
+    <section class="tc-item" id="s10">
+      <div class="tc-q">
+        <span class="tc-num" aria-hidden="true">10</span>
+        <h2>Contact Information</h2>
+      </div>
+      <div class="tc-body">      <p>For questions or clarification regarding cancellations, rescheduling or refunds, please contact us through our official communication channels.</p>
+      <p><strong>RETRO ANTS MEDIA</strong></p>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:contact@retroantsmedia.com">contact@retroantsmedia.com</a></li>
+        <li><strong>Phone / WhatsApp:</strong> <a href="tel:+919741467809">+91 9741467809</a></li>
+        <!-- Add your website here, for example:
+        <li><strong>Website:</strong> <a href="https://www.your-website.com">www.your-website.com</a></li> -->
+        <li><strong>Business Location:</strong> Bengaluru, Karnataka, India</li>
+      </ul>
+    </div>
+    </section>
+  </main>
+</div>
 
-Customers can submit cancellation, rescheduling or refund requests through the following communication channels:
+<div class="tc-end">
+  <a href="index.html" class="tc-back">Back to Home</a>
+  <p class="tc-copy">Copyright © 2026 RETRO ANTS MEDIA. All Rights Reserved.</p>
+</div>
 
-- Email.
-- Phone call.
-- WhatsApp.
-- Written communication.
+<script>
+(function () {
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.tc-item'));
+  var bar = document.getElementById('tc-progress');
 
-Please include the following details when submitting a request:
+  /* cards fade in as they scroll into view */
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('show'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.08 });
+    cards.forEach(function (el) { io.observe(el); });
+  } else {
+    cards.forEach(function (el) { el.classList.add('show'); });
+  }
 
-- Customer name.
-- Booking or order reference number, if available.
-- Date of booking or order.
-- Service or product details.
-- Reason for cancellation or refund.
-- Payment transaction reference, where necessary.
-
-Our team will review the request and communicate the applicable terms and next steps.
-
-## 9. Changes to This Policy
-
-RETRO ANTS MEDIA reserves the right to update or modify this Cancellation & Refund Policy when necessary.
-
-Any changes will be published on this website along with the revised date. Customers are encouraged to review this page periodically.
-
-## 10. Contact Information
-
-For questions or clarification regarding cancellations, rescheduling or refunds, please contact us through our official communication channels.
-
-**RETRO ANTS MEDIA**
-
-- **Email:** [Insert your business email]
-- **Phone / WhatsApp:** [Insert your business contact number]
-- **Website:** [Insert your website URL]
-- **Business Location:** Bengaluru, Karnataka, India
+  /* reading progress bar */
+  function progress() {
+    var h = document.documentElement, max = h.scrollHeight - h.clientHeight;
+    bar.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
+  }
+  window.addEventListener('scroll', progress, { passive: true });
+  progress();
+})();
+</script>
+</body>
+</html>
