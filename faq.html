@@ -168,7 +168,31 @@ body {
 .btn.line { color: #fff; border: 2px solid rgba(255, 255, 255, .5); }
 .btn.line:hover { background: #fff; color: #121212; }
 .btn svg { width: 20px; height: 20px; fill: #fff; }
-
+  
+/* ===== BACK TO HOME ===== */
+.pp-end {
+  --accent: #ed3038;
+  --accent-deep: #c4161e;
+  text-align: center;
+  padding: 10px 20px 60px;
+}
+.pp-back {
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: 999px;
+  text-decoration: none;
+  color: #fff;
+  font: 600 16px Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, var(--accent), var(--accent-deep));
+  box-shadow: 0 12px 28px rgba(237, 48, 56, .4);
+  transition: transform .3s cubic-bezier(.3, 1.6, .5, 1), box-shadow .3s ease;
+}
+.pp-back:hover, .pp-back:focus-visible {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 18px 36px rgba(237, 48, 56, .55);
+}
+.pp-back:focus-visible { outline: 3px solid #171717; outline-offset: 3px; }
+.pp-copy { margin-top: 22px; font-size: 15px; color: #666; }
 /* ===== MOBILE ===== */
 @media only screen and (max-width: 768px) {
   .faq-page { padding: 40px 14px 90px; }
@@ -496,6 +520,11 @@ body {
   </div>
 </main>
 
+  <div class="pp-end">
+  <a href="index.html" class="pp-back">Back to Home</a>
+  <p class="pp-copy">Copyright © 2026 RETRO ANTS MEDIA. All Rights Reserved.</p>
+</div>
+  
 <script>
 (function () {
   /* FAQ accordion: click a question to open or close its answer */
