@@ -1156,42 +1156,6 @@ section {
 .to-top:hover { background: var(--accent); transform: translateY(-3px); }
 .to-top:hover svg { transform: translateY(-2px); }
 
-.footer-keywords {
-  margin-top: 32px;
-  max-width: 560px;
-}
-.footer-keywords h4 {
-  color: #e5e5e5;
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin-bottom: 12px;
-}
-.footer-keywords ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-.footer-keywords a {
-  display: inline-block;
-  padding: 6px 14px;
-  font-size: 13px;
-  color: #bdbdbd;
-  background: #1f1f1f;
-  border: 1px solid #2a2a2a;
-  border-radius: 999px;
-  text-decoration: none;
-  transition: all 0.2s ease;
-}
-.footer-keywords a:hover {
-  color: #fff;
-  border-color: #555;
-}
-
 /* ==========================================================
    MOBILE  (everything below is inside ONE media query)
    ========================================================== */
@@ -1452,17 +1416,6 @@ section {
   .social a, .ft-links a, .ft-links a::after, .ico, .to-top, .to-top svg { transition: none; }
 }
 }
-.footer-keywords {
-    max-width: 100%;
-    margin-top: 24px;
-  }
-  .footer-keywords ul {
-    gap: 6px;
-  }
-  .footer-keywords a {
-    font-size: 12px;
-    padding: 8px 12px; /* bigger tap area */
-  }
 
 /* ==========================================================
    TYPEWRITER TEXT
